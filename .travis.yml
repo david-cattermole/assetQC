@@ -1,3 +1,5 @@
+language: python
+
 # This will run on Travis' 'new' container-based infrastructure
 sudo: false
 
@@ -23,9 +25,16 @@ addons:
       - doxygen-gui
       - graphviz
 
+# Python versions
+python:
+  - "2.7"
+
+# Command to install dependencies
+# install: "pip install -r requirements.txt"
+
 # Build your code e.g. by calling make
-# script:
-#   - make
+script:
+  - py.test
 
 # Generate and deploy documentation
 after_success:
