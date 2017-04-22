@@ -21,6 +21,10 @@ This Python module is not an end-user tool, but a framework people can use as a 
 
 [![Build Status](https://travis-ci.org/david-cattermole/assetQC.svg?branch=master)](https://travis-ci.org/david-cattermole/assetQC)
 
+## Documentation
+
+API Documentation can be found [here](https://david-cattermole.github.io/assetQC/).
+
 ## Usage
 
 _To be written._

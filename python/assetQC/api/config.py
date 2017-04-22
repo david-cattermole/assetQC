@@ -74,6 +74,7 @@ def __readConfig():
     :return: 
     """
     configPath = os.getenv('ASSETQC_CONFIG_PATH', None)
+    print 'configPath', configPath
     data = {}
     if configPath and os.path.isfile(configPath):
         data = __readData(configPath)
@@ -89,7 +90,8 @@ def __getValue(key, noExpand=False):
     :param key: 
     :return: 
     """
-    # assert isinstance(key, basestring)
+    print 'key', key
+    # assert isinstance(key, (str, unicode))
 
     # look at the environment first, if it does not exist fallback to the
     # config file.
@@ -121,7 +123,7 @@ def __expandValue(value):
 
 def __expandTokens(value):
     result = None
-    if isinstance(value, str) or isinstance(value, unicode):
+    if isinstance(value, (str, unicode)):
         result = __expandValue(value)
     elif isinstance(value, list):
         result = []
@@ -137,7 +139,7 @@ def getLoggingConfigPath():
     :return: 
     """
     result = __getValue('ASSETQC_LOGGER_CONFIG_PATH')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -147,7 +149,7 @@ def getBaseDir():
     :return: 
     """
     result = __getValue('ASSETQC_BASE_DIR')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -157,7 +159,7 @@ def getTempDir():
     :return: 
     """
     result = __getValue('ASSETQC_TEMP_DIR')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -167,7 +169,7 @@ def getTestBaseDir():
     :return: 
     """
     result = __getValue('ASSETQC_TEST_BASE_DIR')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -177,7 +179,7 @@ def getTestTempDir():
     :return: 
     """
     result = __getValue('ASSETQC_TEST_TEMP_DIR')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -187,7 +189,7 @@ def getTestDataDir():
     :return: 
     """
     result = __getValue('ASSETQC_TEST_DATA_DIR')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -197,7 +199,7 @@ def getLoggerDir():
     :return: 
     """
     result = __getValue('ASSETQC_LOGGER_DIR')
-    assert isinstance(result, basestring)
+    assert isinstance(result, (str, unicode))
     return result
 
 
@@ -208,10 +210,10 @@ def getPluginSearchPath():
     """
     result = ''
     value = __getValue('ASSETQC_PLUGIN_SEARCH_PATH')
-    assert isinstance(value, list) or isinstance(value, basestring)
+    assert isinstance(value, list) or isinstance(value, (str, unicode))
     if isinstance(value, list):
         for v in value:
             result += v
-    elif isinstance(value, basestring):
+    elif isinstance(value, (str, unicode)):
         result = value
     return result

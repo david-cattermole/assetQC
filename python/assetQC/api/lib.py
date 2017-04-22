@@ -322,7 +322,7 @@ def run(ctx=None,
     :type doValidators: bool
     :type doFixers: bool
     :type doReporters: bool
-    :type logger: assetQC.api.logger.Logger
+    :type logger: assetQC.api_tests.logger.Logger
     :type progressCb: function
     :return:
     """

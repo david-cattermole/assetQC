@@ -1,4 +1,3 @@
-language: python
 
 # This will run on Travis' 'new' container-based infrastructure
 sudo: false
@@ -26,18 +25,21 @@ addons:
       - graphviz
 
 # Python versions
+language: python
 python:
   - "2.7"
 
 # Command to install dependencies
-# install: "pip install -r requirements.txt"
+# install:
+#  - "pip install -r requirements.txt"
+#  - "pip install coverage"
 
 # Build your code e.g. by calling make
 script:
-  - py.test
+  - ./runTests.sh
 
 # Generate and deploy documentation
 after_success:
   - cd $TRAVIS_BUILD_DIR
-  - chmod +x generateDocumentationAndDeploy.sh
-  - ./generateDocumentationAndDeploy.sh
+  - chmod +x generateDocs.sh
+  - ./generateDocs.sh
