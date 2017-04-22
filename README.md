@@ -36,7 +36,7 @@ $ env ASSETQC_BASE_DIR='/home/davidc/maya/2016/scripts'
 sys.path.append('/home/davidc/maya/2016/scripts')
 `
 
-See the [./test/](https://github.com/david-cattermole/assetQC/tree/master/python/assetQC/test) directory for a non-production example usage of assetQC; [./test/mayaAssets/](https://github.com/david-cattermole/assetQC/tree/master/python/assetQC/test/mayaAssets) contains the maya specific example code.
+See the [./test/](https://github.com/david-cattermole/assetQC/tree/master/test/) directory for a non-production example usage of assetQC; [./test/mayaAssets/](https://github.com/david-cattermole/assetQC/tree/master/test/mayaAssets) contains the maya specific example code.
 
 ### Configuration
 
