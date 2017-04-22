@@ -71,7 +71,7 @@ echo "" > .nojekyll
 ##### Generate the Doxygen code documentation and log the output.          #####
 echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
-doxygen $DOXYFILE 2>&1 | tee doxygen.log
+( cd $TRAVIS_BUILD_DIR && doxygen $DOXYFILE ) 2>&1 | tee doxygen.log
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
@@ -99,5 +99,9 @@ else
     echo '' >&2
     echo 'Warning: No documentation (html) files have been found!' >&2
     echo 'Warning: Not going to push the documentation to GitHub!' >&2
+
+    echo 'Doxygen Log:' >&2
+    cat doxygen.log
+
     exit 1
 fi
