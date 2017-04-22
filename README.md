@@ -23,7 +23,7 @@ This Python module is not an end-user tool, but a framework people can use as a 
 
 ## Documentation
 
-API Documentation can be found [here](https://david-cattermole.github.io/assetQC/).
+API Documentation can be found [here](https://david-cattermole.github.io/assetQC/html/index.html).
 
 ## Usage
 
