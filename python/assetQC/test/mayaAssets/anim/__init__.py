@@ -1,3 +1,0 @@
-"""
-Animation Curve Asset Plugins.
-"""

@@ -10,7 +10,7 @@ branches:
 env:
   global:
     - GH_REPO_NAME: assetQC
-    - DOXYFILE: $TRAVIS_BUILD_DIR/<path_to_your_doxygen_configuration_file>
+    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
     - GH_REPO_REF: github.com/david-cattermole/assetQC.git
 
 # Install dependencies
