@@ -1,0 +1,24 @@
+\hypertarget{namespaceassetQC_1_1api_1_1validator}{\section{asset\-Q\-C\-:\-:api\-:\-:validator \-Namespace \-Reference}
+\label{d7/d4e/namespaceassetQC_1_1api_1_1validator}\index{asset\-Q\-C\-::api\-::validator@{asset\-Q\-C\-::api\-::validator}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classassetQC_1_1api_1_1validator_1_1Validator}{\-Validator}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}
+Validator object used to validate data.
+
+Given an asset instance validate the asset data.
+Multiple validators can be used for each asset type.
+Each validator is required to be completely agnostic to other validators.
+Validator must not change the scene or must revert the the state before returning.
+
+This is intended to be an object that defines a function which will return
+true or false, if the data is valid or not.
+
+\end{DoxyVerb}
+ 

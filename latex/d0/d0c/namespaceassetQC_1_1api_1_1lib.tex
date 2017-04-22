@@ -1,0 +1,116 @@
+\hypertarget{namespaceassetQC_1_1api_1_1lib}{\section{asset\-Q\-C\-:\-:api\-:\-:lib \-Namespace \-Reference}
+\label{d0/d0c/namespaceassetQC_1_1api_1_1lib}\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceassetQC_1_1api_1_1lib_aae391026440eb321f69eb221ff84d902}{run}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a357b88752480ac61b0bfc4277501ec64}{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X} = 29
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a5476b0ae8899a971ed7094b029122060}{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N} = 1
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_aeae5864c292b953b80f3d491510b8aad}{\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T} = 100
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a98e10bbfe008c239c013d9afdfd49459}{\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X} = 79
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_ae10c8faa2d931fe7bf7dd484dba87a06}{\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N} = 60
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a9cd204b641d7f5436709c28aa8becb2e}{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X} = 99
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a7ab8b7443a93f8688f1511d87baa2d47}{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N} = 80
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a2ed90379a54b2a0690cdb8c5f0273a21}{\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T} = 0
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_a3428fb1cbffaad5d05f6471df73ac145}{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X} = 59
+\item 
+int \hyperlink{namespaceassetQC_1_1api_1_1lib_ad014e0d97f40bdf20edd6c0340a02c26}{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N} = 30
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}
+Underlying library of 'assetsQC' tool.
+
+Classes:
+- Collector
+- Validator
+- AssetInstance
+- Status
+- Fixer
+\end{DoxyVerb}
+ 
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_aae391026440eb321f69eb221ff84d902}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!run@{run}}
+\index{run@{run}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf asset\-Q\-C.\-api.\-lib.\-run} (
+\begin{DoxyParamCaption}
+\item[{}]{ctx = {\ttfamily \-None}, }
+\item[{}]{asset\-Type = {\ttfamily \-None}, }
+\item[{}]{do\-Collectors = {\ttfamily \-True}, }
+\item[{}]{do\-Validators = {\ttfamily \-True}, }
+\item[{}]{do\-Fixers = {\ttfamily \-True}, }
+\item[{}]{do\-Reporters = {\ttfamily \-True}, }
+\item[{}]{logger = {\ttfamily \-None}, }
+\item[{}]{progress\-Cb = {\ttfamily {\bf asset\-Q\-C.\-api.\-logger.\-progress}}}
+\end{DoxyParamCaption}
+)}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_aae391026440eb321f69eb221ff84d902}
+\begin{DoxyVerb}
+Runs asset quality checking.
+
+:param ctx:
+:param assetType:
+:param doCollectors:
+:param doValidators:
+:param doFixers:
+:param doReporters:
+:param logger:
+:param progressCb: Progress Callback
+
+:type ctx: assetQC.api.context.Context
+:type assetType: str
+:type doCollectors: bool
+:type doValidators: bool
+:type doFixers: bool
+:type doReporters: bool
+:type logger: assetQC.api_tests.logger.Logger
+:type progressCb: function
+:return:
+\end{DoxyVerb}
+ 
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a357b88752480ac61b0bfc4277501ec64}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X@{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X}}
+\index{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X@{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-A\-X} = 29}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a357b88752480ac61b0bfc4277501ec64}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a5476b0ae8899a971ed7094b029122060}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N@{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N}}
+\index{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N@{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-C\-O\-L\-L\-E\-C\-T\-O\-R\-\_\-\-M\-I\-N} = 1}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a5476b0ae8899a971ed7094b029122060}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_aeae5864c292b953b80f3d491510b8aad}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T@{\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T}}
+\index{\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T@{\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-F\-I\-N\-I\-S\-H\-\_\-\-P\-E\-R\-C\-E\-N\-T} = 100}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_aeae5864c292b953b80f3d491510b8aad}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a98e10bbfe008c239c013d9afdfd49459}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X@{\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X}}
+\index{\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X@{\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-F\-I\-X\-E\-R\-\_\-\-M\-A\-X} = 79}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a98e10bbfe008c239c013d9afdfd49459}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_ae10c8faa2d931fe7bf7dd484dba87a06}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N@{\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N}}
+\index{\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N@{\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-F\-I\-X\-E\-R\-\_\-\-M\-I\-N} = 60}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_ae10c8faa2d931fe7bf7dd484dba87a06}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a9cd204b641d7f5436709c28aa8becb2e}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X@{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X}}
+\index{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X@{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-A\-X} = 99}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a9cd204b641d7f5436709c28aa8becb2e}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a7ab8b7443a93f8688f1511d87baa2d47}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N@{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N}}
+\index{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N@{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-I\-N} = 80}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a7ab8b7443a93f8688f1511d87baa2d47}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a2ed90379a54b2a0690cdb8c5f0273a21}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T@{\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T}}
+\index{\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T@{\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-S\-T\-A\-R\-T\-\_\-\-P\-E\-R\-C\-E\-N\-T} = 0}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a2ed90379a54b2a0690cdb8c5f0273a21}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_a3428fb1cbffaad5d05f6471df73ac145}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X@{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X}}
+\index{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X@{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-A\-X} = 59}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_a3428fb1cbffaad5d05f6471df73ac145}
+\hypertarget{namespaceassetQC_1_1api_1_1lib_ad014e0d97f40bdf20edd6c0340a02c26}{\index{asset\-Q\-C\-::api\-::lib@{asset\-Q\-C\-::api\-::lib}!\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N@{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N}}
+\index{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N@{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N}!assetQC::api::lib@{asset\-Q\-C\-::api\-::lib}}
+\subsubsection[{\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf asset\-Q\-C\-::api\-::lib\-::\-V\-A\-L\-I\-D\-A\-T\-O\-R\-\_\-\-M\-I\-N} = 30}}\label{d0/d0c/namespaceassetQC_1_1api_1_1lib_ad014e0d97f40bdf20edd6c0340a02c26}
