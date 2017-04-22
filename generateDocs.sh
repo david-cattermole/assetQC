@@ -40,8 +40,8 @@ echo 'Setting up the script...'
 set -e
 
 # Create a clean working directory for this script.
-mkdir docs
-cd docs
+mkdir $TRAVIS_BUILD_DIR/docs
+cd $TRAVIS_BUILD_DIR/docs
 
 # Get the current gh-pages branch
 git clone -b gh-pages https://git@$GH_REPO_REF
@@ -73,9 +73,7 @@ echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
 ( cd $TRAVIS_BUILD_DIR && doxygen $DOXYFILE ) 2>&1 | tee doxygen.log
 
-cd $TRAVIS_BUILD_DIR
-echo "$TRAVIS_BUILD_DIR=" $TRAVIS_BUILD_DIR
-echo `ls -lh`
+cd $TRAVIS_BUILD_DIR/docs
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
