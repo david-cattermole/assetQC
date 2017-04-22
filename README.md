@@ -18,7 +18,47 @@ This Python module is not an end-user tool, but a framework people can use as a 
 - Example tests for a rudimentary computer graphics pipeline.
 
 ## Usage
+
 _To be written._
+
+### Running
+
+`
+$ env ASSETQC_BASE_DIR='/home/davidc/maya/2016/scripts'
+sys.path.append('/home/davidc/maya/2016/scripts')
+`
+
+See the [./test/](https://github.com/david-cattermole/assetQC/tree/master/python/assetQC/test) directory for a non-production example usage of assetQC; [./test/mayaAssets/](https://github.com/david-cattermole/assetQC/tree/master/python/assetQC/test/mayaAssets) contains the maya specific example code.
+
+### Configuration
+
+- ASSETQC_BASE_DIR
+  - The base directory for the assetQC module.
+  - Example; _"/home/davidc/dev/mayaScripts/trunk/assetQC"_
+  
+- ASSETQC_LOGGER_CONFIG_PATH
+  - Example; _"${ASSETQC_BASE_DIR}/test/"_
+  
+- ASSETQC_LOGGER_DIR
+  - Example; _"${ASSETQC_BASE_DIR}/test/"_
+  
+- ASSETQC_TEST_BASE_DIR
+  - The base directory for the test functions.
+  - Example; _"${ASSETQC_BASE_DIR}/test/"_
+  
+- ASSETQC_TEST_TEMP_DIR
+  - Example; _"${ASSETQC_BASE_DIR}/test/tmp/"_
+  
+- ASSETQC_TEST_DATA_DIR
+  - Example; _"${ASSETQC_TEMP_BASE_DIR}/test/data"_
+  
+- ASSETQC_PLUGIN_SEARCH_PATH
+  - Search in these directories for plugins.
+  - Example; _"${ASSETQC_TEMP_BASE_DIR}/:${ASSETQC_TEMP_BASE_DIR}/mayaAssets/camera"_
+  
+- ASSETQC_TEMP_DIR
+  - A temporary directory (used only test)
+  - Example; _"/tmp/assetQC"_
 
 ## Install
 
@@ -26,15 +66,11 @@ _To be written._
 
 ### Dependencies
 
-- Python 2.x
+- Python 2.7.x
 
 ### Optional Dependencies
 
 - Autodesk Maya 2016
-
-### Build
-
-_To be written._
 
 ### Install
 
