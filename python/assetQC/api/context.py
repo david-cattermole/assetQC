@@ -14,6 +14,7 @@ Stores the following:
 """
 
 import os
+import pwd
 import socket
 import assetQC.api.utils
 import assetQC.api.assetInstance
@@ -37,7 +38,7 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
         # user data
         self.__environ = dict(os.environ)
         self.__operatingSystem = os.name
-        self.__userName = os.getlogin()
+        self.__userName = pwd.getpwuid(os.geteuid()).pw_name
         self.__hostName = socket.gethostname()
         # TODO: We should add the ability to detect and extend 'hostApps'.
         self.__hostApplication = 'maya'  # None
