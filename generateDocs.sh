@@ -60,6 +60,9 @@ git config user.email "travis@travis-ci.org"
 # can be safely cleaned, and it is sure that everything pushed later is the new
 # documentation.
 rm -rf *
+# CURRENTCOMMIT=`git rev-parse HEAD`
+# git reset --hard `git rev-list HEAD | tail -n 1`
+# git reset --soft $CURRENTCOMMIT
 
 # Need to create a .nojekyll file to allow filenames starting with an underscore
 # to be seen on the gh-pages site. Therefore creating an empty .nojekyll file.
@@ -73,7 +76,7 @@ echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
 ( cd $TRAVIS_BUILD_DIR && doxygen $DOXYFILE ) 2>&1 | tee doxygen.log
 
-cd $TRAVIS_BUILD_DIR/docs
+cd $TRAVIS_BUILD_DIR/docs/assetQC
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
