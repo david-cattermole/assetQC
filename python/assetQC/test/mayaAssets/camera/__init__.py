@@ -1,3 +1,0 @@
-"""
-Camera Asset Plugins
-"""

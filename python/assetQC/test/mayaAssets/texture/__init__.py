@@ -1,3 +1,0 @@
-"""
-Texture Asset Plugins
-"""

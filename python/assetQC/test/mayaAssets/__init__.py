@@ -1,3 +1,0 @@
-"""
-Maya Asset Plugins
-"""
