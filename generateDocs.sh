@@ -40,7 +40,7 @@ echo 'Setting up the script...'
 set -e
 
 # Create a clean working directory for this script.
-mkdir -p docs
+mkdir docs
 cd docs
 
 # Get the current gh-pages branch
