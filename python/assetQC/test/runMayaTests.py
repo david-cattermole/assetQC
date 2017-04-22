@@ -32,7 +32,7 @@ import assetQC.test.mayaAssets.camera.cameraKeyframeCountValidator as cameraKeyf
 import assetQC.test.mayaAssets.camera.cameraFilmbackValidator as cameraFilmbackValidator
 import assetQC.test.mayaAssets.rig.rigCollector as rigCollector
 import assetQC.test.mayaAssets.rig.rigValidator as rigValidator
-import assetQC.test.testUtils as testUtils
+import assetQC.test.mayaUtils as testUtils
 
 
 def test1():
