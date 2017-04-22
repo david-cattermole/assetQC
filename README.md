@@ -17,6 +17,10 @@ This Python module is not an end-user tool, but a framework people can use as a 
 - Per-asset exception handling framework
 - Example tests for a rudimentary computer graphics pipeline.
 
+## Build Status 
+
+[![Build Status](https://travis-ci.org/david-cattermole/assetQC.svg?branch=master)](https://travis-ci.org/david-cattermole/assetQC)
+
 ## Usage
 
 _To be written._
