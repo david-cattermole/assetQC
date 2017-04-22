@@ -40,8 +40,8 @@ echo 'Setting up the script...'
 set -e
 
 # Create a clean working directory for this script.
-mkdir $TRAVIS_BUILD_DIR/docs
-cd $TRAVIS_BUILD_DIR/docs
+mkdir docs
+cd docs
 
 # Get the current gh-pages branch
 git clone -b gh-pages https://git@$GH_REPO_REF
@@ -86,7 +86,7 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
     # gh-pages branch.
     # GitHub is smart enough to know which files have changed and which files have
     # stayed the same and will only update the changed files.
-    git add --all
+    git add --all :/
 
     # Commit the added files with a title and description containing the Travis CI
     # build number and the GitHub commit reference that issued this build.
