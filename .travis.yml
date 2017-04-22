@@ -30,9 +30,9 @@ python:
   - "2.7"
 
 # Command to install dependencies
-# install:
+install:
+  - "pip install coverage"
 #  - "pip install -r requirements.txt"
-#  - "pip install coverage"
 
 # Build your code e.g. by calling make
 script:
