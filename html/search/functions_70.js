@@ -5,6 +5,5 @@ var searchData=
   ['printprogress',['printProgress',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html#aabac01f23742a5115eb4ed149afc3a25',1,'assetQC::api::utils']]],
   ['printprogressnum',['printProgressNum',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html#abbade4735019457fea46e0ad15b00933',1,'assetQC::api::utils']]],
   ['progress',['progress',['../dd/d37/namespaceassetQC_1_1api_1_1logger.html#aa8ac771f9cd69fd8ee9d06458361894c',1,'assetQC::api::logger']]],
-  ['progresscb',['progressCb',['../d6/d67/classtest_1_1ui_1_1mayaUI_1_1MayaUI.html#a7e85867267c9e9a966aab0013d644e7e',1,'test::ui::mayaUI::MayaUI']]],
   ['progressnum',['progressNum',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a239e40b09df7daa90b8a0ff82a14c05b',1,'assetQC::api::utils']]]
 ];

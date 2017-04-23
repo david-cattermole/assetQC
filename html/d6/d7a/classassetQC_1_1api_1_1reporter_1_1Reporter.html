@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">assetQC
-   &#160;<span id="projectnumber">1</span>
+   
    </div>
    
   </td>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -109,19 +109,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <!-- doxytag: class="assetQC::api::reporter::Reporter" --><!-- doxytag: inherits="assetQC::api::baseDataObject::BaseDataObject" --><div class="dynheader">
 Inheritance diagram for assetQC.api.reporter.Reporter:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.png" usemap="#assetQC.api.reporter.Reporter_map" alt=""/>
-  <map id="assetQC.api.reporter.Reporter_map" name="assetQC.api.reporter.Reporter_map">
-<area href="../../df/d72/classassetQC_1_1api_1_1baseDataObject_1_1BaseDataObject.html" alt="assetQC.api.baseDataObject.BaseDataObject" shape="rect" coords="0,0,270,24"/>
-</map>
- </div></div>
+<div class="center"><img src="../../d6/d13/classassetQC_1_1api_1_1reporter_1_1Reporter__inherit__graph.png" border="0" usemap="#assetQC_8api_8reporter_8Reporter_inherit__map" alt="Inheritance graph"/></div>
+<map name="assetQC_8api_8reporter_8Reporter_inherit__map" id="assetQC_8api_8reporter_8Reporter_inherit__map">
+<area shape="rect" id="node2" href="../../df/d72/classassetQC_1_1api_1_1baseDataObject_1_1BaseDataObject.html" title="assetQC.api.baseDataObject.BaseDataObject" alt="" coords="5,5,320,35"/></map>
+<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="../../d8/d7e/classassetQC_1_1api_1_1reporter_1_1Reporter-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#adb6ab4bc6fe9c38f821229aaa918da39">__init__</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a1c17ab753e50299c8230996d220d38e4">doProcess</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2cfc6598bb065c6c00d87797c45b741e">condition</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#ac5e72bd94862c8ff838099dcfb43512d">logDebug</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#ac5b32f5160245dce933f72f2fa69ae22">logError</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a5060e8eeee1a5dd3d8876e4afdf82863">logFailure</a></td></tr>
@@ -138,7 +136,12 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2ed0fdfd4a3d1e63e5ae488d89411826">hostApps</a> = []</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a8c2e20a2bd9879bd2229ef6e35e96fa9">priority</a> = None</td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><div class="fragment"><pre class="fragment">
+Reports the context and status of the 'Asset QC' operation.
+ 
+This class is intended to be sub-classed and extended.
+</pre></div> </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adb6ab4bc6fe9c38f821229aaa918da39"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::__init__" ref="adb6ab4bc6fe9c38f821229aaa918da39" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -156,15 +159,24 @@ Static Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../df/d72/classassetQC_1_1api_1_1baseDataObject_1_1BaseDataObject.html#a4fbd03e88e48a2c88be98b32cc389a91">assetQC.api.baseDataObject.BaseDataObject</a>.</p>
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_adb6ab4bc6fe9c38f821229aaa918da39_cgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_adb6ab4bc6fe9c38f821229aaa918da39_cgraph" alt=""/></div>
+<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_adb6ab4bc6fe9c38f821229aaa918da39_cgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_adb6ab4bc6fe9c38f821229aaa918da39_cgraph">
+<area shape="rect" id="node3" href="../../df/d72/classassetQC_1_1api_1_1baseDataObject_1_1BaseDataObject.html#acfee126a64f96398b490544c3b492f41" title="assetQC.api.baseDataObject.BaseDataObject.getClassName" alt="" coords="319,5,729,35"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a1c17ab753e50299c8230996d220d38e4"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::doProcess" ref="a1c17ab753e50299c8230996d220d38e4" args="" -->
+<a class="anchor" id="a2cfc6598bb065c6c00d87797c45b741e"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::condition" ref="a2cfc6598bb065c6c00d87797c45b741e" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a1c17ab753e50299c8230996d220d38e4">assetQC.api.reporter.Reporter.doProcess</a> </td>
+          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2cfc6598bb065c6c00d87797c45b741e">assetQC.api.reporter.Reporter.condition</a> </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -173,7 +185,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>context</em>&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -183,6 +195,20 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Method for sub-classes to override with a condition that the object
+will run in.
+
+Return True to indicate the Reporter should be run, False otherwise.
+</pre></div> 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a2cfc6598bb065c6c00d87797c45b741e_cgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a2cfc6598bb065c6c00d87797c45b741e_cgraph" alt=""/></div>
+<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a2cfc6598bb065c6c00d87797c45b741e_cgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a2cfc6598bb065c6c00d87797c45b741e_cgraph">
+<area shape="rect" id="node3" href="../../d4/d7c/classassetQC_1_1api_1_1collector_1_1Collector.html#a2dfb1d4c4b7454ed4cf12fc0b9ba15d4" title="assetQC.api.collector.Collector.preRun" alt="" coords="333,5,595,35"/><area shape="rect" id="node5" href="../../d7/da8/classassetQC_1_1api_1_1fixer_1_1Fixer.html#a599b02aec5058d717de4f3742e544662" title="assetQC.api.fixer.Fixer.preRun" alt="" coords="360,59,568,88"/><area shape="rect" id="node7" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#aa900b8d5de0c4b9b9bcc89a5ba6ec8ed" title="assetQC.api.reporter.Reporter.preRun" alt="" coords="335,112,593,141"/><area shape="rect" id="node9" href="../../d4/d7c/classassetQC_1_1api_1_1collector_1_1Collector.html#a9d6aeafbefb97fdf05d3921d01860a8b" title="assetQC.api.collector.Collector.run" alt="" coords="344,165,584,195"/><area shape="rect" id="node11" href="../../d7/da8/classassetQC_1_1api_1_1fixer_1_1Fixer.html#a402e3fb543f90b311dad855982172e8f" title="assetQC.api.fixer.Fixer.run" alt="" coords="371,219,557,248"/><area shape="rect" id="node13" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a0289eb96ca2f3d0246a37e92d6c7912e" title="assetQC.api.reporter.Reporter.run" alt="" coords="347,272,581,301"/><area shape="rect" id="node15" href="../../d4/d7c/classassetQC_1_1api_1_1collector_1_1Collector.html#a362bfa8581f8a822eaff25c21a987d06" title="assetQC.api.collector.Collector.postRun" alt="" coords="329,325,599,355"/><area shape="rect" id="node17" href="../../d7/da8/classassetQC_1_1api_1_1fixer_1_1Fixer.html#a922972ee4199fa94af0efb3746b90be2" title="assetQC.api.fixer.Fixer.postRun" alt="" coords="356,379,572,408"/><area shape="rect" id="node19" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a10e1d98abaadf082a489f0b7b0bdd483" title="assetQC.api.reporter.Reporter.postRun" alt="" coords="331,432,597,461"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -210,6 +236,21 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Log a debug message against this Reporter object.
+
+:param msg: Message to log.
+:type msg: str
+:return: None
+</pre></div> 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph" alt=""/></div>
+<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph">
+<area shape="rect" id="node3" href="../../d6/d00/classassetQC_1_1api_1_1validator_1_1Validator.html#a015e68050f01248dda0f7e6c14c3f5df" title="assetQC.api.validator.Validator.condition" alt="" coords="332,5,609,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -237,7 +278,13 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Log an error message against this Reporter object.
 
+:param msg: Message to log.
+:type msg: str
+:return: None
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a5060e8eeee1a5dd3d8876e4afdf82863"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logFailure" ref="a5060e8eeee1a5dd3d8876e4afdf82863" args="" -->
@@ -264,7 +311,13 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Log a failure message against this Reporter object.
 
+:param msg: Message to log.
+:type msg: str
+:return: None
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a8bfb63d17dbebd0d92f10bd13d53cc7e"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logInfo" ref="a8bfb63d17dbebd0d92f10bd13d53cc7e" args="" -->
@@ -291,7 +344,13 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Log an information message against this Reporter object.
 
+:param msg: Message to log.
+:type msg: str
+:return: None
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="af431f6a408338102b1fbd9d8e518beab"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logProgress" ref="af431f6a408338102b1fbd9d8e518beab" args="" -->
@@ -324,7 +383,15 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Log a progress message against this Reporter object.
 
+:param msg: Message to log.
+:type msg: str
+:param num: Percentage of the progess, between 0 and 100 inclusive.
+:type num: int
+:return: None
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a1f07b96adb52c9ef16b8949e3589ec16"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logWarning" ref="a1f07b96adb52c9ef16b8949e3589ec16" args="" -->
@@ -351,7 +418,13 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Log a warning message against this Reporter object.
 
+:param msg: Message to log.
+:type msg: str
+:return: None
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a10e1d98abaadf082a489f0b7b0bdd483"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::postRun" ref="a10e1d98abaadf082a489f0b7b0bdd483" args="" -->
@@ -368,7 +441,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>context</em>&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -378,6 +451,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Run after the Reporter 'run' method. 
+
+Users can optionally override this method in a sub-class.
+
+:param ctx: Context of function.
+:type ctx: assetQC.api.context.Context 
+:return: None
+</pre></div> 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a10e1d98abaadf082a489f0b7b0bdd483_icgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a10e1d98abaadf082a489f0b7b0bdd483_icgraph" alt=""/></div>
+<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a10e1d98abaadf082a489f0b7b0bdd483_icgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a10e1d98abaadf082a489f0b7b0bdd483_icgraph">
+<area shape="rect" id="node3" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2cfc6598bb065c6c00d87797c45b741e" title="assetQC.api.reporter.Reporter.condition" alt="" coords="324,5,596,35"/><area shape="rect" id="node5" href="../../d6/d00/classassetQC_1_1api_1_1validator_1_1Validator.html#a015e68050f01248dda0f7e6c14c3f5df" title="assetQC.api.validator.Validator.condition" alt="" coords="321,59,599,88"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -395,7 +485,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>context</em>&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -405,6 +495,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Run before the Reporter 'run' method. 
+
+Users can optionally override this method in a sub-class.
+
+:param ctx: Context of function.
+:type ctx: assetQC.api.context.Context
+:return: None
+</pre></div> 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_aa900b8d5de0c4b9b9bcc89a5ba6ec8ed_icgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_aa900b8d5de0c4b9b9bcc89a5ba6ec8ed_icgraph" alt=""/></div>
+<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_aa900b8d5de0c4b9b9bcc89a5ba6ec8ed_icgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_aa900b8d5de0c4b9b9bcc89a5ba6ec8ed_icgraph">
+<area shape="rect" id="node3" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2cfc6598bb065c6c00d87797c45b741e" title="assetQC.api.reporter.Reporter.condition" alt="" coords="316,5,588,35"/><area shape="rect" id="node5" href="../../d6/d00/classassetQC_1_1api_1_1validator_1_1Validator.html#a015e68050f01248dda0f7e6c14c3f5df" title="assetQC.api.validator.Validator.condition" alt="" coords="313,59,591,88"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -422,7 +529,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>context</em>&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -432,6 +539,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
+Runs the reporter function for the Context given. 
+
+Users MUST override this method in a sub-class.
+
+:param ctx: Context of function.
+:type ctx: assetQC.api.context.Context 
+:return: None
+</pre></div> 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a0289eb96ca2f3d0246a37e92d6c7912e_icgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a0289eb96ca2f3d0246a37e92d6c7912e_icgraph" alt=""/></div>
+<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a0289eb96ca2f3d0246a37e92d6c7912e_icgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_a0289eb96ca2f3d0246a37e92d6c7912e_icgraph">
+<area shape="rect" id="node3" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2cfc6598bb065c6c00d87797c45b741e" title="assetQC.api.reporter.Reporter.condition" alt="" coords="295,5,567,35"/><area shape="rect" id="node5" href="../../d6/d00/classassetQC_1_1api_1_1validator_1_1Validator.html#a015e68050f01248dda0f7e6c14c3f5df" title="assetQC.api.validator.Validator.condition" alt="" coords="292,59,569,88"/></map>
+</div>
+</p>
 
 </div>
 </div>

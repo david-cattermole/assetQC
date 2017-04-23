@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#ab76d75fee36fd8b2c3fbddd221854a5c" title="assetQC.api.context.Context.clearCollectorPlugins" alt="" coords="355,5,696,35"/>
+<area shape="rect" id="node5" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#adb43964bdd272e16ddc8658e7b9eb6e3" title="assetQC.api.context.Context.clearValidatorPlugins" alt="" coords="355,59,696,88"/>
+<area shape="rect" id="node7" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#af3e1da1d7b1ff5cca18148c7a8a2c3bb" title="assetQC.api.context.Context.clearReporterPlugins" alt="" coords="356,112,695,141"/>
+</map>

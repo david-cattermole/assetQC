@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a26e440825b8a5ba3fb79e033dc148f4f" title="assetQC.api.context.Context.getCollectorPlugins" alt="" coords="339,59,669,88"/>
+<area shape="rect" id="node9" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a08ddfdd74d2699d02cc9e31f7a5edcf7" title="assetQC.api.context.Context.getValidatorPlugins" alt="" coords="339,112,669,141"/>
+<area shape="rect" id="node5" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#aaea8bba814dd355e79caccda9fe8b974" title="assetQC.api.context.Context.addCollectorPlugin" alt="" coords="731,5,1056,35"/>
+<area shape="rect" id="node7" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a4cb27780abb0a712e3b6677b13ff896c" title="assetQC.api.context.Context.removeCollectorPlugin" alt="" coords="717,59,1069,88"/>
+<area shape="rect" id="node11" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a27eaaee7b650e9faf9b183e36ccad502" title="assetQC.api.context.Context.addValidatorPlugin" alt="" coords="731,112,1056,141"/>
+<area shape="rect" id="node13" href="$d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a76cd1c3610bdcb9fce19d87f7f70cb7e" title="assetQC.api.context.Context.removeValidatorPlugin" alt="" coords="717,165,1069,195"/>
+</map>
