@@ -56,7 +56,8 @@ def _runCollection(ctx,
 
         # do collection
         try:
-            collector.doProcess(ctx)
+            if collector.condition(ctx):
+                collector._doProcess(ctx)
         except WarningStatus, msg:
             collector.logWarning(msg)
         except FailureStatus:
@@ -112,7 +113,8 @@ def _runValidation(ctx,
 
             # NOTE: instances are assumed valid until proven otherwise.
             try:
-                validator.doProcess(ctx)
+                if validator.condition(ctx):
+                    validator._doProcess(ctx)
             except WarningStatus:
                 # Users should not raise a warning, instead they should
                 # add them to the instance so we can gather as many
@@ -197,7 +199,8 @@ def _runFixers(ctx,
                                                 progressCb)
 
                 try:
-                    fixer.doProcess(ctx)
+                    if fixer.condition(ctx):
+                        fixer._doProcess(ctx)
                 except WarningStatus, msg:
                     pass
                 except FailureStatus, msg:
@@ -227,7 +230,8 @@ def _runFixers(ctx,
                 # run validator again
                 validator = validatorObj(instance)
                 try:
-                    validator.doProcess(ctx)
+                    if validator.condition(ctx):
+                        validator._doProcess(ctx)
                 except WarningStatus:
                     pass
                 except FailureStatus, msg:
@@ -279,7 +283,8 @@ def _runReporters(ctx,
 
         # do reporter
         try:
-            reporter.doProcess(ctx)
+            if reporter.condition(ctx):
+                reporter._doProcess(ctx)
         except WarningStatus, msg:
             reporter.logWarning(msg)
         except FailureStatus:
@@ -307,14 +312,14 @@ def run(ctx=None,
     """
     Runs asset quality checking.
 
-    :param ctx:
-    :param assetType:
-    :param doCollectors:
-    :param doValidators:
-    :param doFixers:
-    :param doReporters:
-    :param logger:
-    :param progressCb: Progress Callback
+    :param ctx: Context to run in, or None to create a new one.
+    :param assetType: Asset type to operate on, or None to inducate all types.
+    :param doCollectors: Run asset collection?
+    :param doValidators: Run asset validation?
+    :param doFixers: Run automatic fixers?
+    :param doReporters: Run reporters to report QC results?
+    :param logger: Logging object, or None.
+    :param progressCb: Callback function to be used to display progress.
     
     :type ctx: assetQC.api.context.Context
     :type assetType: str

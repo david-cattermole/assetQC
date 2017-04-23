@@ -1,14 +1,5 @@
 """
 Responsible for outputting results of the validator process.
-
-TODO: Work out the best name for this module.
-- Reporter
-- Outputer
-- Harvester
-- Feeder
-- Printer
-- Processor
-- ???
 """
 
 import abc
@@ -25,6 +16,12 @@ import assetQC.api.logger
 # - assign shaders/colours to mayaAssets that are invalid.
 # - do nothing
 class Reporter(assetQC.api.baseDataObject.BaseDataObject):
+    """
+    Reports the context and status of the 'Asset QC' operation.
+     
+    This class is intended to be sub-classed and extended.
+    """
+
     __metaclass__ = abc.ABCMeta
 
     # static variables
@@ -44,21 +41,66 @@ class Reporter(assetQC.api.baseDataObject.BaseDataObject):
         name = assetQC.api.logger.BASE_LOG_NAME + '.' + name
         self.__logger = assetQC.api.logger.getLogger(name)
 
-    def doProcess(self, context):
-        assert isinstance(context, assetQC.api.context.Context)
-        self.preRun(context)
-        self.run(context)
-        self.postRun(context)
+    @abc.abstractmethod
+    def condition(self, ctx):
+        """
+        Method for sub-classes to override with a condition that the object
+        will run in.
+
+        Return True to indicate the Reporter should be run, False otherwise.
+        """
+        return True
+
+    def _doProcess(self, ctx):
+        """
+        High-level function for running the reporter.
+        This method is for internal use only.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
+        """
+        assert isinstance(ctx, assetQC.api.context.Context)
+        self.preRun(ctx)
+        self.run(ctx)
+        self.postRun(ctx)
         return
 
-    def preRun(self, context):
+    def preRun(self, ctx):
+        """
+        Run before the Reporter 'run' method. 
+
+        Users can optionally override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
+        """
         return
 
     @abc.abstractmethod
-    def run(self, context):
+    def run(self, ctx):
+        """
+        Runs the reporter function for the Context given. 
+
+        Users MUST override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context 
+        :return: None
+        """
         return
 
-    def postRun(self, context):
+    def postRun(self, ctx):
+        """
+        Run after the Reporter 'run' method. 
+
+        Users can optionally override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context 
+        :return: None
+        """
         return
 
     def logInfo(self, msg):

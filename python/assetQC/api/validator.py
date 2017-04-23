@@ -22,6 +22,12 @@ import assetQC.api.logger as logger
 
 class Validator(baseDataObject.BaseDataObject,
                 baseTestObject.BaseTestObject):
+    """
+    Defines a validation method 'run' which is used to ensure.
+    
+    This class is intended to be sub-classed and extended.
+    """
+
     __metaclass__ = abc.ABCMeta
 
     # static variables
@@ -46,16 +52,21 @@ class Validator(baseDataObject.BaseDataObject,
     @abc.abstractmethod
     def condition(self, ctx):
         """
-        Method for base classes to override with a condition that the object
+        Method for sub-classes to override with a condition that the object
         will run in.
+
+        Return True to indicate the Validator should be run, False otherwise.
         """
         return True
 
-    def doProcess(self, ctx):
+    def _doProcess(self, ctx):
         """
-        
-        :param ctx: 
-        :return: 
+        High-level function for running the Validator.
+        This method is for internal use ONLY.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
         """
         assert isinstance(ctx, context.Context)
         s = time.clock()  # start
@@ -71,26 +82,38 @@ class Validator(baseDataObject.BaseDataObject,
 
     def preRun(self, ctx):
         """
-        
-        :param ctx: 
-        :return: 
+        Run before the Validator 'run' method. 
+
+        Users can optionally override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
         """
         return
 
     @abc.abstractmethod
     def run(self, ctx):
         """
-        
-        :param ctx: 
-        :return: 
+        Runs the Validator function on the given Asset Instance 
+
+        Users MUST override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context 
+        :return: None
         """
         return
 
     def postRun(self, ctx):
         """
-        
-        :param ctx: 
-        :return: 
+        Run after the Fixer 'run' method. 
+
+        Users can optionally override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context 
+        :return: None
         """
         return
 

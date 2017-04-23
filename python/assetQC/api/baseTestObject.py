@@ -1,11 +1,19 @@
 """
-Assert statements and return status codes.
+Module with 'BaseTestObject' class for assert statement functionality.
+
+This should NOT be used directly by API users.
 """
 
 from assetQC.api.status import FailureStatus
 
 
 class BaseTestObject(object):
+    """
+    Holds common 'assert' statements.
+    
+    This should NOT be used directly by API users.
+    """
+
     def __init__(self):
         super(BaseTestObject, self).__init__()
 

@@ -58,9 +58,10 @@ class memoized(object):
 @memoized
 def __readData(filePath):
     """
+    Read file path as JSON data format.
     
-    :param filePath: 
-    :return: 
+    :param filePath: File path to .json file. 
+    :return: Contents of the .json file.
     """
     f = open(filePath, 'rb')
     data = json.load(f)
@@ -70,8 +71,7 @@ def __readData(filePath):
 
 def __readConfig():
     """
-    
-    :return: 
+    Get the configuration file contents.
     """
     configPath = os.getenv('ASSETQC_CONFIG_PATH', None)
     print 'configPath', configPath
@@ -90,7 +90,6 @@ def __getValue(key, noExpand=False):
     :param key: 
     :return: 
     """
-    print 'key', key
     # assert isinstance(key, (str, unicode))
 
     # look at the environment first, if it does not exist fallback to the
@@ -102,12 +101,10 @@ def __getValue(key, noExpand=False):
         data = __readConfig()
         if data and key in data:
             result = data[key]
-    # print 'getValue1:', key, result
 
     if result and not noExpand:
         result = __expandTokens(result)
 
-    # print 'getValue:', key, result, '\n'
     return result
 
 

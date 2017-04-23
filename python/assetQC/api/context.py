@@ -31,6 +31,15 @@ FIND_MODE_NONE = ()
 
 
 class Context(assetQC.api.baseDataObject.BaseDataObject):
+    """
+    Defines the Context ('state') the 'assetQC' process is executed in.
+    
+    'Context' is used to hold plugins and Asset Instances to be operated on by 
+    the 'assetQC' process.    
+    
+    Allows read-only access to system information.
+    """
+
     def __init__(self,
                  find=None):
         super(Context, self).__init__()

@@ -17,6 +17,11 @@ import assetQC.api.logger
 
 class Collector(baseDataObject.BaseDataObject,
                 baseTestObject.BaseTestObject):
+    """
+    Collects and filters data into AssetInstances of different types.
+    
+    This class is intended to be sub-classed and extended.
+    """
     __metaclass__ = abc.ABCMeta
 
     # static variables
@@ -35,12 +40,22 @@ class Collector(baseDataObject.BaseDataObject,
     @abc.abstractmethod
     def condition(self, ctx):
         """
-        Method for base classes to override with a condition that the object
+        Method for sub-classes to override with a condition that the object
         will run in.
+
+        Return True to indicate the Collector should be run, False otherwise.
         """
         return True
 
-    def doProcess(self, ctx):
+    def _doProcess(self, ctx):
+        """
+        High-level function for running the collector.
+        This method is for internal use ONLY.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
+        """
         assert isinstance(ctx, assetQC.api.context.Context)
         s = time.clock()  # start
 
@@ -55,13 +70,40 @@ class Collector(baseDataObject.BaseDataObject,
         return
 
     def preRun(self, ctx):
+        """
+        Run before the Collector 'run' method. 
+
+        Users can optionally override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
+        """
         return
 
     @abc.abstractmethod
     def run(self, ctx):
+        """
+        Runs the Collector function in the given context. 
+
+        Users MUST override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context 
+        :return: None
+        """
         return
 
     def postRun(self, ctx):
+        """
+        Run after the Collector 'run' method. 
+
+        Users can optionally override this method in a sub-class.
+
+        :param ctx: Context of function.
+        :type ctx: assetQC.api.context.Context
+        :return: None
+        """
         return
 
     def logInfo(self, msg):
