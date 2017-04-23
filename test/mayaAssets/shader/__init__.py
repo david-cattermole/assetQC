@@ -1,3 +1,0 @@
-"""
-Shader Asset Plugins.
-"""

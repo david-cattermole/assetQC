@@ -6,13 +6,22 @@ Intended to be used for internal use ONLY.
 
 import os
 import imp
+import sys
 import assetQC.api.logger
 import assetQC.api.config as config
 
 HOST_APP_ALL = 'all'
+HOST_APP_STANDALONE = 'standalone'
+HOST_APP_MAYA = 'maya'
 
 
 def sortObjectsByPriority(objList, assetType):
+    """
+    
+    :param objList: 
+    :param assetType: 
+    :return: 
+    """
     sortedData = {}
     for obj in objList:
         if assetType is not None and assetType not in obj.assetTypes:
@@ -26,6 +35,10 @@ def sortObjectsByPriority(objList, assetType):
 
 
 def getSearchPaths():
+    """
+    
+    :return: 
+    """
     searchPaths = config.getPluginSearchPath()
     if not searchPaths:
         return []
@@ -38,6 +51,13 @@ def getSearchPaths():
 
 
 def findPlugin(searchDirectories, endswithString, extension='.py'):
+    """
+    
+    :param searchDirectories: 
+    :param endswithString: 
+    :param extension: 
+    :return: 
+    """
     assert isinstance(searchDirectories, list)
     assert isinstance(endswithString, str)
     endswithNum = len(endswithString)
@@ -72,6 +92,12 @@ def findPlugin(searchDirectories, endswithString, extension='.py'):
 
 
 def findPlugins(pluginList, pluginType):
+    """
+    
+    :param pluginList: 
+    :param pluginType: 
+    :return: 
+    """
     searchDirs = getSearchPaths()
     plugins = findPlugin(searchDirs, pluginType)
     for plugin in plugins:
@@ -81,6 +107,13 @@ def findPlugins(pluginList, pluginType):
 
 
 def getPlugins(pluginList, assetType=None, hostApp=None):
+    """
+    
+    :param pluginList: 
+    :param assetType: 
+    :param hostApp: 
+    :return: 
+    """
     pluginDict = sortObjectsByPriority(pluginList, assetType)
 
     # Return the plugins sorted by priority.
@@ -104,6 +137,12 @@ def getPlugins(pluginList, assetType=None, hostApp=None):
 
 
 def clearPlugins(pluginList, assetTypes=()):
+    """
+    
+    :param pluginList: 
+    :param assetTypes: 
+    :return: 
+    """
     if len(assetTypes):
         tmpList = list(pluginList)
         pluginList = []
@@ -117,6 +156,14 @@ def clearPlugins(pluginList, assetTypes=()):
 
 
 def progressNum(index, totalNum, minNum, maxNum):
+    """
+    
+    :param index: 
+    :param totalNum: 
+    :param minNum: 
+    :param maxNum: 
+    :return: 
+    """
     num = float(index + 1) / float(totalNum)
     diffNum = maxNum - minNum
     num = minNum + (num * diffNum)
@@ -124,6 +171,14 @@ def progressNum(index, totalNum, minNum, maxNum):
 
 
 def printProgressNum(msg, num, progressCb, logger=None):
+    """
+    
+    :param msg: 
+    :param num: 
+    :param progressCb: 
+    :param logger: 
+    :return: 
+    """
     if progressCb:
         progressCb(msg, num)
     else:
@@ -131,6 +186,16 @@ def printProgressNum(msg, num, progressCb, logger=None):
 
 
 def printProgress(msg, index, total, minNum, maxNum, progressCb):
+    """
+    
+    :param msg: 
+    :param index: 
+    :param total: 
+    :param minNum: 
+    :param maxNum: 
+    :param progressCb: 
+    :return: 
+    """
     num = progressNum(index, total, minNum, maxNum)
     if progressCb:
         progressCb(msg, num)
@@ -139,6 +204,12 @@ def printProgress(msg, index, total, minNum, maxNum, progressCb):
 
 
 def formatInstances(context, validFilter):
+    """
+    
+    :param context: 
+    :param validFilter: 
+    :return: 
+    """
     lines = []
     for instance in context.getInstances(sortByName=True):
         if instance.isValid() != validFilter:
@@ -166,3 +237,46 @@ def formatInstances(context, validFilter):
 
     return lines
 
+
+def isMayaRunning():
+    result = False
+
+    try:
+        import maya.standalone
+        maya.standalone.initialize()
+        result = True
+    except ImportError:
+        result = False
+
+    try:
+        import maya.cmds
+        if maya.cmds.about(version=True):
+            result = True
+        else:
+            result = True
+    except:
+        result = False
+    return result
+
+
+def isStandaloneRunning():
+    result = False
+    if sys.executable:
+        dir, name = os.path.split(sys.executable)
+        if 'python' in name:
+            result = True
+    # if not isMayaRunning():
+    #     result = True
+    # assert False
+    return result
+
+
+def getHostApplication():
+    result = None
+    if assetQC.api.utils.isMayaRunning():
+        result = HOST_APP_MAYA
+    elif assetQC.api.utils.isStandaloneRunning():
+        result = HOST_APP_STANDALONE
+    else:
+        result = HOST_APP_STANDALONE
+    return result

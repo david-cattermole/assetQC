@@ -41,23 +41,34 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
     """
 
     def __init__(self,
-                 find=None):
+                 find=None,
+                 root=None,
+                 hostApp=None):
         super(Context, self).__init__()
+        assert find is None or isinstance(find, (tuple, list))
+        assert root is None or isinstance(root, str)
+        assert hostApp is None or isinstance(hostApp, str)
 
         # user data
         self.__environ = dict(os.environ)
         self.__operatingSystem = os.name
         self.__userName = pwd.getpwuid(os.geteuid()).pw_name
         self.__hostName = socket.gethostname()
-        # TODO: We should add the ability to detect and extend 'hostApps'.
-        self.__hostApplication = 'maya'  # None
+        self.__hostApplication = assetQC.api.utils.HOST_APP_ALL
+        if hostApp is None:
+            self.__hostApplication = assetQC.api.utils.getHostApplication()
+        elif hostApp:
+            self.__hostApplication = hostApp
+        self.__rootDirectory = os.getcwd()
+        if root:
+            self.__rootDirectory = root
 
         # plugins
         self.__collectors = []
         self.__validators = []
         self.__reporters = []
 
-        # mayaAssets
+        # assets
         self.__instances = {}
 
         # find objects
@@ -72,6 +83,9 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
 
     def getEnvVar(self, name, default=None):
         return self.__environ.get(name, default)
+
+    def getRootDirectory(self):
+        return self.__rootDirectory
 
     def getUserName(self):
         return self.__userName

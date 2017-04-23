@@ -74,7 +74,6 @@ def __readConfig():
     Get the configuration file contents.
     """
     configPath = os.getenv('ASSETQC_CONFIG_PATH', None)
-    print 'configPath', configPath
     data = {}
     if configPath and os.path.isfile(configPath):
         data = __readData(configPath)
@@ -83,14 +82,14 @@ def __readConfig():
     return data
 
 
-def __getValue(key, noExpand=False):
+def __getValue(key, expand=True):
     """
     Get the value from the environment or config file.
     
     :param key: 
     :return: 
     """
-    # assert isinstance(key, (str, unicode))
+    assert isinstance(key, (str, unicode))
 
     # look at the environment first, if it does not exist fallback to the
     # config file.
@@ -102,7 +101,7 @@ def __getValue(key, noExpand=False):
         if data and key in data:
             result = data[key]
 
-    if result and not noExpand:
+    if result and expand == True:
         result = __expandTokens(result)
 
     return result
@@ -113,7 +112,7 @@ def __expandValue(value):
     for name in CONFIG_ENTRY_NAMES:
         key = '${' + name + '}'
         if key in result:
-            keyValue = __getValue(name, noExpand=True)
+            keyValue = __getValue(name, expand=False)
             result = result.replace(key, keyValue)
     return result
 
