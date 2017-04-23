@@ -48,6 +48,8 @@ Searching for files in directory /home/travis/build/david-cattermole/assetQC/pyt
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/python/assetQC/api
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/python/assetQC/cmd
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/test
+Searching for files in directory /home/travis/build/david-cattermole/assetQC/tests
+Searching for files in directory /home/travis/build/david-cattermole/assetQC/tests/test
 Reading and parsing tag files
 Reading /home/travis/build/david-cattermole/assetQC/python/assetQC/__init__.py...
 Parsing file /home/travis/build/david-cattermole/assetQC/python/assetQC/__init__.py...
@@ -399,6 +401,6 @@ Patching output file 13/16
 Patching output file 14/16
 Patching output file 15/16
 Patching output file 16/16
-symbol cache used 229/65536 hits=12191 misses=229
-lookup cache used 297/65536 hits=676 misses=314
+symbol cache used 236/65536 hits=12576 misses=236
+lookup cache used 303/65536 hits=684 misses=320
 finished...

@@ -111,8 +111,11 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a99957955d5d3bbf94e08f9dda097d3c3">findPlugin</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#ad8250bdcf020e4f61a323782eec52416">findPlugins</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#ae3cff6d54d4c94976b9164c2c351a24f">formatInstances</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a3d805b3c4fd87925ef8c1d05a9af3d29">getHostApplication</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#adb053a6c47f07e3326657db5f4c8f879">getPlugins</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a57dc61643aef549e8d74a142c47d52f6">getSearchPaths</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a20eab398c1022ba399515b668781e775">isMayaRunning</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#ae4eb849ca180cdfe621db1661a221ce1">isStandaloneRunning</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#aabac01f23742a5115eb4ed149afc3a25">printProgress</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#abbade4735019457fea46e0ad15b00933">printProgressNum</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a239e40b09df7daa90b8a0ff82a14c05b">progressNum</a></td></tr>
@@ -120,6 +123,8 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a246070f0bec149bf994a2364083a3a20">HOST_APP_ALL</a> = 'all'</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#adb8834f9bcb2e6a88940c3253384b616">HOST_APP_MAYA</a> = 'maya'</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a1554abc6241da2ab0f9668a3536f15ab">HOST_APP_STANDALONE</a> = 'standalone'</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><div class="fragment"><pre class="fragment">
@@ -151,7 +156,12 @@ Intended to be used for internal use ONLY.
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param pluginList: 
+:param assetTypes: 
+:return: 
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a99957955d5d3bbf94e08f9dda097d3c3"></a><!-- doxytag: member="assetQC::api::utils::findPlugin" ref="a99957955d5d3bbf94e08f9dda097d3c3" args="" -->
@@ -184,7 +194,13 @@ Intended to be used for internal use ONLY.
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param searchDirectories: 
+:param endswithString: 
+:param extension: 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -220,7 +236,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param pluginList: 
+:param pluginType: 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -252,6 +273,27 @@ Here is the call graph for this function:</div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<div class="fragment"><pre class="fragment">
+
+:param context: 
+:param validFilter: 
+:return: 
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a3d805b3c4fd87925ef8c1d05a9af3d29"></a><!-- doxytag: member="assetQC::api::utils::getHostApplication" ref="a3d805b3c4fd87925ef8c1d05a9af3d29" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a3d805b3c4fd87925ef8c1d05a9af3d29">assetQC.api.utils.getHostApplication</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -289,7 +331,13 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param pluginList: 
+:param assetType: 
+:param hostApp: 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -314,7 +362,10 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -323,6 +374,38 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#ad8250bdcf020e4f61a323782eec52416" title="assetQC.api.utils.findPlugins" alt="" coords="289,5,489,35"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a20eab398c1022ba399515b668781e775"></a><!-- doxytag: member="assetQC::api::utils::isMayaRunning" ref="a20eab398c1022ba399515b668781e775" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a20eab398c1022ba399515b668781e775">assetQC.api.utils.isMayaRunning</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4eb849ca180cdfe621db1661a221ce1"></a><!-- doxytag: member="assetQC::api::utils::isStandaloneRunning" ref="ae4eb849ca180cdfe621db1661a221ce1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#ae4eb849ca180cdfe621db1661a221ce1">assetQC.api.utils.isStandaloneRunning</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -374,7 +457,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param msg: 
+:param index: 
+:param total: 
+:param minNum: 
+:param maxNum: 
+:param progressCb: 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -422,7 +514,14 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param msg: 
+:param num: 
+:param progressCb: 
+:param logger: 
+:return: 
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a239e40b09df7daa90b8a0ff82a14c05b"></a><!-- doxytag: member="assetQC::api::utils::progressNum" ref="a239e40b09df7daa90b8a0ff82a14c05b" args="" -->
@@ -461,7 +560,14 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param index: 
+:param totalNum: 
+:param minNum: 
+:param maxNum: 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -497,7 +603,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+<div class="fragment"><pre class="fragment">
 
+:param objList: 
+:param assetType: 
+:return: 
+</pre></div> 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -516,6 +627,32 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">string <a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a246070f0bec149bf994a2364083a3a20">assetQC::api::utils::HOST_APP_ALL</a> = 'all'</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb8834f9bcb2e6a88940c3253384b616"></a><!-- doxytag: member="assetQC::api::utils::HOST_APP_MAYA" ref="adb8834f9bcb2e6a88940c3253384b616" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#adb8834f9bcb2e6a88940c3253384b616">assetQC::api::utils::HOST_APP_MAYA</a> = 'maya'</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1554abc6241da2ab0f9668a3536f15ab"></a><!-- doxytag: member="assetQC::api::utils::HOST_APP_STANDALONE" ref="a1554abc6241da2ab0f9668a3536f15ab" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="../../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a1554abc6241da2ab0f9668a3536f15ab">assetQC::api::utils::HOST_APP_STANDALONE</a> = 'standalone'</td>
         </tr>
       </table>
 </div>
