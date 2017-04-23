@@ -11,7 +11,9 @@ import assetQC.api.baseDataObject as baseDataObject
 
 
 class AssetInstance(baseDataObject.BaseDataObject):
-
+    """
+    Defines an asset.
+    """
     def __init__(self, name, assetType=None):
         super(AssetInstance, self).__init__()
         assert isinstance(name, str)
@@ -24,12 +26,24 @@ class AssetInstance(baseDataObject.BaseDataObject):
         self.__logger = logger.getLogger(logName)
 
     def getName(self):
+        """
+        Return the name of the AssetInstance 
+        """
         return self.__name
 
     def getAssetType(self):
+        """
+        Returns the asset type of the AssetInstance. 
+        """
         return self.__assetType
 
     def isValid(self):
+        """
+        Returns the state of the AssetInstance validation.
+
+        The AssetInstance is not valid if there are any error messages logged 
+        against the AssetInstance.
+        """
         # Do we have any statuses?
         return not bool(self.__statuses)
 
@@ -63,23 +77,70 @@ class AssetInstance(baseDataObject.BaseDataObject):
             self.addFixer(validator, value)
 
     def getFixerList(self):
+        """
+        Return list of Fixer objects attached to this AssetInstance.
+        """
         return self.__fixers
 
     def logInfo(self, msg):
+        """
+        Log an information message against this AssetInstance object.
+
+        :param msg: Message to log.
+        :type msg: str
+        :return: None
+        """
         return self.__logger.info(msg)
 
     def logProgress(self, msg, num):
+        """
+        Log a progress message against this AssetInstance object.
+
+        :param msg: Message to log.
+        :type msg: str
+        :param num: Percentage of the progess, between 0 and 100 inclusive.
+        :type num: int
+        :return: None
+        """
         msg = '{0}% {1}'.format(num, msg)
         return self.__logger.log(logger.LEVEL_PROGRESS, msg)
 
     def logWarning(self, msg):
+        """
+        Log a warning message against this AssetInstance object.
+
+        :param msg: Message to log.
+        :type msg: str
+        :return: None
+        """
         return self.__logger.warning(msg)
 
     def logFailure(self, msg):
+        """
+        Log a failure message against this AssetInstance object.
+
+        :param msg: Message to log.
+        :type msg: str
+        :return: None
+        """
         return self.__logger.log(logger.LEVEL_FAILURE, msg)
 
     def logError(self, msg):
+        """
+        Log an error message against this AssetInstance object.
+
+        :param msg: Message to log.
+        :type msg: str
+        :return: None
+        """
         return self.__logger.error(msg)
 
     def logDebug(self, msg):
+        """
+        Log a debug message against this AssetInstance object.
+
+        :param msg: Message to log.
+        :type msg: str
+        :return: None
+        """
         return self.__logger.debug(msg)

@@ -1,7 +1,7 @@
 """
 Status
 
-- Return an object from a Validator.
+- Return an object from a Validator object.
 - Defines the Success or Failure of a Validator.
 - Holds any messages that the Validator wants to return.
 """
@@ -63,7 +63,7 @@ class ErrorStatus(Status):
 
 class FailureStatus(Status):
     """
-
+    Something happened which is bad, but we can accept it and continue on.
     """
     pass
 

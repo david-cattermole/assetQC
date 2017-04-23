@@ -1,5 +1,7 @@
 """
 Low-level utilities for the 'check asset' tool.
+
+Intended to be used for internal use ONLY.
 """
 
 import os
