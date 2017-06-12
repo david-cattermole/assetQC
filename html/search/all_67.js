@@ -3,7 +3,6 @@ var searchData=
   ['getassettype',['getAssetType',['../da/d1c/classassetQC_1_1api_1_1assetInstance_1_1AssetInstance.html#ad0c03f523bc92db99fb8b95dce2693fa',1,'assetQC::api::assetInstance::AssetInstance']]],
   ['getbasedir',['getBaseDir',['../de/d2b/namespaceassetQC_1_1api_1_1config.html#a7f8fd6ff8eaea6aacd15b80c097cec52',1,'assetQC::api::config']]],
   ['getclassname',['getClassName',['../df/d72/classassetQC_1_1api_1_1baseDataObject_1_1BaseDataObject.html#acfee126a64f96398b490544c3b492f41',1,'assetQC::api::baseDataObject::BaseDataObject']]],
-  ['getcollectorplugins',['getCollectorPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a26e440825b8a5ba3fb79e033dc148f4f',1,'assetQC::api::context::Context']]],
   ['getenvvar',['getEnvVar',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a92af32f38fe839c3eb709d4e9c090ce7',1,'assetQC::api::context::Context']]],
   ['getfixerlist',['getFixerList',['../da/d1c/classassetQC_1_1api_1_1assetInstance_1_1AssetInstance.html#a4a36d7d043a174eef720159cbea85110',1,'assetQC::api::assetInstance::AssetInstance.getFixerList()'],['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#ad8aa307fb35a5ae8f2b706b1da4dd97c',1,'assetQC::api::status::StatusObject.getFixerList()']]],
   ['gethash',['getHash',['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#aaa5c50ebf8d624e0fc7f16a09e1fea74',1,'assetQC::api::status::StatusObject']]],
@@ -18,11 +17,11 @@ var searchData=
   ['getmessage',['getMessage',['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#a7bef1acde665d7b5f4ec7e9aa4ce66db',1,'assetQC::api::status::StatusObject']]],
   ['getname',['getName',['../da/d1c/classassetQC_1_1api_1_1assetInstance_1_1AssetInstance.html#a463681f87883bdb584f84f7b1005b77b',1,'assetQC::api::assetInstance::AssetInstance']]],
   ['getobjecthash',['getObjectHash',['../df/d72/classassetQC_1_1api_1_1baseDataObject_1_1BaseDataObject.html#abc3f47521639243e06c8201b8dd97f44',1,'assetQC::api::baseDataObject::BaseDataObject']]],
-  ['getplugins',['getPlugins',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html#adb053a6c47f07e3326657db5f4c8f879',1,'assetQC::api::utils']]],
+  ['getpluginmanager',['getPluginManager',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a98ce4c00929e48c08b57d67728e14f41',1,'assetQC::api::context::Context.getPluginManager()'],['../d3/dd9/namespaceassetQC_1_1api_1_1register.html#a488b17354d4602b6657faa9feceab30b',1,'assetQC::api::register.getPluginManager()']]],
+  ['getplugins',['getPlugins',['../d7/db5/classassetQC_1_1api_1_1register_1_1PluginManager.html#ae62c78493e8a71ccf327f23531ac1b6b',1,'assetQC::api::register::PluginManager']]],
   ['getpluginsearchpath',['getPluginSearchPath',['../de/d2b/namespaceassetQC_1_1api_1_1config.html#a2bee437affbf9ed05fe4f18012f27274',1,'assetQC::api::config']]],
-  ['getreporterplugins',['getReporterPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#aea0953a710f316487208e12ff54d51bf',1,'assetQC::api::context::Context']]],
   ['getrootdirectory',['getRootDirectory',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#aee0f7fcc9fd23d55ae3798357ed4a98d',1,'assetQC::api::context::Context']]],
-  ['getsearchpaths',['getSearchPaths',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html#a57dc61643aef549e8d74a142c47d52f6',1,'assetQC::api::utils']]],
+  ['getsearchpaths',['getSearchPaths',['../d3/dd9/namespaceassetQC_1_1api_1_1register.html#a1942bc6f49d9da1486afccec73a23dcb',1,'assetQC::api::register']]],
   ['getstatus',['getStatus',['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#a513e7d4b09a812d72f6965cb0427b6f5',1,'assetQC::api::status::StatusObject']]],
   ['getstatuslist',['getStatusList',['../da/d1c/classassetQC_1_1api_1_1assetInstance_1_1AssetInstance.html#a0aec177c340afee8bbd8b8260392541c',1,'assetQC::api::assetInstance::AssetInstance']]],
   ['gettempdir',['getTempDir',['../de/d2b/namespaceassetQC_1_1api_1_1config.html#a26bbd66eeb76bf03017a802bbde8b740',1,'assetQC::api::config']]],
@@ -32,6 +31,5 @@ var searchData=
   ['gettraceback',['getTraceback',['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#a34ad6bc766907cb91eff1e1017769100',1,'assetQC::api::status::StatusObject']]],
   ['getuseremailaddress',['getUserEmailAddress',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a04293e0558284fd9070e73452f16005a',1,'assetQC::api::context::Context']]],
   ['getusername',['getUserName',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a49ffda78ecb90f853ca4c84f272cf834',1,'assetQC::api::context::Context']]],
-  ['getvalidator',['getValidator',['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#af2254cd39841b00452882b945d65556e',1,'assetQC::api::status::StatusObject']]],
-  ['getvalidatorplugins',['getValidatorPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a08ddfdd74d2699d02cc9e31f7a5edcf7',1,'assetQC::api::context::Context']]]
+  ['getvalidator',['getValidator',['../d3/d7f/classassetQC_1_1api_1_1status_1_1StatusObject.html#af2254cd39841b00452882b945d65556e',1,'assetQC::api::status::StatusObject']]]
 ];

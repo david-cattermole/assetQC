@@ -13,6 +13,7 @@ var searchData=
   ['fixer',['fixer',['../d9/da8/namespaceassetQC_1_1api_1_1fixer.html',1,'assetQC::api']]],
   ['lib',['lib',['../d0/d0c/namespaceassetQC_1_1api_1_1lib.html',1,'assetQC::api']]],
   ['logger',['logger',['../dd/d37/namespaceassetQC_1_1api_1_1logger.html',1,'assetQC::api']]],
+  ['register',['register',['../d3/dd9/namespaceassetQC_1_1api_1_1register.html',1,'assetQC::api']]],
   ['reporter',['reporter',['../d7/d0b/namespaceassetQC_1_1api_1_1reporter.html',1,'assetQC::api']]],
   ['status',['status',['../d7/d3f/namespaceassetQC_1_1api_1_1status.html',1,'assetQC::api']]],
   ['utils',['utils',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html',1,'assetQC::api']]],

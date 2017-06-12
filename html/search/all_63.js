@@ -1,13 +1,8 @@
 var searchData=
 [
   ['cache',['cache',['../d5/d8c/classassetQC_1_1api_1_1config_1_1memoized.html#abb23d4f3922f3c01cd82a840125303fe',1,'assetQC::api::config::memoized']]],
-  ['clearallplugins',['clearAllPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a41d58dfb93876f4190c99221fe95e32b',1,'assetQC::api::context::Context']]],
-  ['clearcollectorplugins',['clearCollectorPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#ab76d75fee36fd8b2c3fbddd221854a5c',1,'assetQC::api::context::Context']]],
   ['clearinstances',['clearInstances',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#a4779fb0b263714f5df0ed33be55c2b1c',1,'assetQC::api::context::Context']]],
-  ['clearplugins',['clearPlugins',['../d2/d37/namespaceassetQC_1_1api_1_1utils.html#abe066b440b985a7cadb4872aa49ff748',1,'assetQC::api::utils']]],
-  ['clearreporterplugins',['clearReporterPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#af3e1da1d7b1ff5cca18148c7a8a2c3bb',1,'assetQC::api::context::Context']]],
   ['clearstatuslist',['clearStatusList',['../da/d1c/classassetQC_1_1api_1_1assetInstance_1_1AssetInstance.html#a6ed98c4a5210fd7237ed846600bfbc03',1,'assetQC::api::assetInstance::AssetInstance']]],
-  ['clearvalidatorplugins',['clearValidatorPlugins',['../d1/d82/classassetQC_1_1api_1_1context_1_1Context.html#adb43964bdd272e16ddc8658e7b9eb6e3',1,'assetQC::api::context::Context']]],
   ['collector',['Collector',['../d4/d7c/classassetQC_1_1api_1_1collector_1_1Collector.html',1,'assetQC::api::collector']]],
   ['collector_2epy',['collector.py',['../d9/d68/collector_8py.html',1,'']]],
   ['collector_5fmax',['COLLECTOR_MAX',['../d0/d0c/namespaceassetQC_1_1api_1_1lib.html#a357b88752480ac61b0bfc4277501ec64',1,'assetQC::api::lib']]],

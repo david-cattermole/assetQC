@@ -47,7 +47,6 @@ Searching for files in directory /home/travis/build/david-cattermole/assetQC/pyt
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/python/assetQC
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/python/assetQC/api
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/python/assetQC/cmd
-Searching for files in directory /home/travis/build/david-cattermole/assetQC/test
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/tests
 Searching for files in directory /home/travis/build/david-cattermole/assetQC/tests/test
 Reading and parsing tag files
@@ -73,6 +72,8 @@ Reading /home/travis/build/david-cattermole/assetQC/python/assetQC/api/lib.py...
 Parsing file /home/travis/build/david-cattermole/assetQC/python/assetQC/api/lib.py...
 Reading /home/travis/build/david-cattermole/assetQC/python/assetQC/api/logger.py...
 Parsing file /home/travis/build/david-cattermole/assetQC/python/assetQC/api/logger.py...
+Reading /home/travis/build/david-cattermole/assetQC/python/assetQC/api/register.py...
+Parsing file /home/travis/build/david-cattermole/assetQC/python/assetQC/api/register.py...
 Reading /home/travis/build/david-cattermole/assetQC/python/assetQC/api/reporter.py...
 Parsing file /home/travis/build/david-cattermole/assetQC/python/assetQC/api/reporter.py...
 Reading /home/travis/build/david-cattermole/assetQC/python/assetQC/api/status.py...
@@ -146,6 +147,7 @@ Parsing code for file python/assetQC/api/context.py...
 Parsing code for file python/assetQC/api/fixer.py...
 Parsing code for file python/assetQC/api/lib.py...
 Parsing code for file python/assetQC/api/logger.py...
+Parsing code for file python/assetQC/api/register.py...
 Parsing code for file python/assetQC/api/reporter.py...
 Parsing code for file python/assetQC/api/status.py...
 Parsing code for file python/assetQC/api/utils.py...
@@ -164,6 +166,7 @@ Generating docs for file python/assetQC/api/context.py...
 Generating docs for file python/assetQC/api/fixer.py...
 Generating docs for file python/assetQC/api/lib.py...
 Generating docs for file python/assetQC/api/logger.py...
+Generating docs for file python/assetQC/api/register.py...
 Generating docs for file python/assetQC/api/reporter.py...
 Generating docs for file python/assetQC/api/status.py...
 Generating docs for file python/assetQC/api/utils.py...
@@ -204,31 +207,13 @@ Generating caller graph for function assetQC::api::config::memoized::__call__
 Generating call graph for function assetQC::api::config::memoized::__get__
 Generating docs for namespace assetQC::api::context
 Generating docs for compound assetQC::api::context::Context...
-Generating call graph for function assetQC::api::context::Context::__init__
-Generating call graph for function assetQC::api::context::Context::addCollectorPlugin
 Generating call graph for function assetQC::api::context::Context::addInstance
-Generating call graph for function assetQC::api::context::Context::addReporterPlugin
-Generating call graph for function assetQC::api::context::Context::addValidatorPlugin
-Generating call graph for function assetQC::api::context::Context::clearAllPlugins
-Generating caller graph for function assetQC::api::context::Context::clearCollectorPlugins
-Generating caller graph for function assetQC::api::context::Context::clearReporterPlugins
-Generating caller graph for function assetQC::api::context::Context::clearValidatorPlugins
-Generating caller graph for function assetQC::api::context::Context::findCollectorPlugins
-Generating caller graph for function assetQC::api::context::Context::findReporterPlugins
-Generating caller graph for function assetQC::api::context::Context::findValidatorPlugins
-Generating call graph for function assetQC::api::context::Context::getCollectorPlugins
-Generating caller graph for function assetQC::api::context::Context::getCollectorPlugins
-Generating caller graph for function assetQC::api::context::Context::getHostApp
+Generating caller graph for function assetQC::api::context::Context::addInstance
+Generating call graph for function assetQC::api::context::Context::addInstances
 Generating caller graph for function assetQC::api::context::Context::getHostName
-Generating caller graph for function assetQC::api::context::Context::getReporterPlugins
 Generating call graph for function assetQC::api::context::Context::getUserEmailAddress
 Generating caller graph for function assetQC::api::context::Context::getUserName
-Generating call graph for function assetQC::api::context::Context::getValidatorPlugins
-Generating caller graph for function assetQC::api::context::Context::getValidatorPlugins
 Generating caller graph for function assetQC::api::context::Context::hasInstance
-Generating call graph for function assetQC::api::context::Context::removeCollectorPlugin
-Generating call graph for function assetQC::api::context::Context::removeReporterPlugin
-Generating call graph for function assetQC::api::context::Context::removeValidatorPlugin
 Generating docs for namespace assetQC::api::fixer
 Generating docs for compound assetQC::api::fixer::Fixer...
 Generating call graph for function assetQC::api::fixer::Fixer::__init__
@@ -246,6 +231,11 @@ Generating caller graph for function assetQC::api::logger::getLogger
 Generating call graph for function assetQC::api::logger::info
 Generating call graph for function assetQC::api::logger::progress
 Generating call graph for function assetQC::api::logger::warning
+Generating docs for namespace assetQC::api::register
+Generating caller graph for function assetQC::api::register::getSearchPaths
+Generating call graph for function assetQC::api::register::importAllPlugins
+Generating docs for compound assetQC::api::register::PluginManager...
+Generating call graph for function assetQC::api::register::PluginManager::getPlugins
 Generating docs for namespace assetQC::api::reporter
 Generating docs for compound assetQC::api::reporter::Reporter...
 Generating call graph for function assetQC::api::reporter::Reporter::__init__
@@ -261,13 +251,8 @@ Generating docs for compound assetQC::api::status::Status...
 Generating docs for compound assetQC::api::status::StatusObject...
 Generating docs for compound assetQC::api::status::WarningStatus...
 Generating docs for namespace assetQC::api::utils
-Generating caller graph for function assetQC::api::utils::findPlugin
-Generating call graph for function assetQC::api::utils::findPlugins
-Generating call graph for function assetQC::api::utils::getPlugins
-Generating caller graph for function assetQC::api::utils::getSearchPaths
 Generating call graph for function assetQC::api::utils::printProgress
 Generating caller graph for function assetQC::api::utils::progressNum
-Generating caller graph for function assetQC::api::utils::sortObjectsByPriority
 Generating docs for namespace assetQC::api::validator
 Generating docs for compound assetQC::api::validator::Validator...
 Generating call graph for function assetQC::api::validator::Validator::__init__
@@ -294,113 +279,96 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/91
-Running dot for graph 2/91
-Running dot for graph 3/91
-Running dot for graph 4/91
-Running dot for graph 5/91
-Running dot for graph 6/91
-Running dot for graph 7/91
-Running dot for graph 8/91
-Running dot for graph 9/91
-Running dot for graph 10/91
-Running dot for graph 11/91
-Running dot for graph 12/91
-Running dot for graph 13/91
-Running dot for graph 14/91
-Running dot for graph 15/91
-Running dot for graph 16/91
-Running dot for graph 17/91
-Running dot for graph 18/91
-Running dot for graph 19/91
-Running dot for graph 20/91
-Running dot for graph 21/91
-Running dot for graph 22/91
-Running dot for graph 23/91
-Running dot for graph 24/91
-Running dot for graph 25/91
-Running dot for graph 26/91
-Running dot for graph 27/91
-Running dot for graph 28/91
-Running dot for graph 29/91
-Running dot for graph 30/91
-Running dot for graph 31/91
-Running dot for graph 32/91
-Running dot for graph 33/91
-Running dot for graph 34/91
-Running dot for graph 35/91
-Running dot for graph 36/91
-Running dot for graph 37/91
-Running dot for graph 38/91
-Running dot for graph 39/91
-Running dot for graph 40/91
-Running dot for graph 41/91
-Running dot for graph 42/91
-Running dot for graph 43/91
-Running dot for graph 44/91
-Running dot for graph 45/91
-Running dot for graph 46/91
-Running dot for graph 47/91
-Running dot for graph 48/91
-Running dot for graph 49/91
-Running dot for graph 50/91
-Running dot for graph 51/91
-Running dot for graph 52/91
-Running dot for graph 53/91
-Running dot for graph 54/91
-Running dot for graph 55/91
-Running dot for graph 56/91
-Running dot for graph 57/91
-Running dot for graph 58/91
-Running dot for graph 59/91
-Running dot for graph 60/91
-Running dot for graph 61/91
-Running dot for graph 62/91
-Running dot for graph 63/91
-Running dot for graph 64/91
-Running dot for graph 65/91
-Running dot for graph 66/91
-Running dot for graph 67/91
-Running dot for graph 68/91
-Running dot for graph 69/91
-Running dot for graph 70/91
-Running dot for graph 71/91
-Running dot for graph 72/91
-Running dot for graph 73/91
-Running dot for graph 74/91
-Running dot for graph 75/91
-Running dot for graph 76/91
-Running dot for graph 77/91
-Running dot for graph 78/91
-Running dot for graph 79/91
-Running dot for graph 80/91
-Running dot for graph 81/91
-Running dot for graph 82/91
-Running dot for graph 83/91
-Running dot for graph 84/91
-Running dot for graph 85/91
-Running dot for graph 86/91
-Running dot for graph 87/91
-Running dot for graph 88/91
-Running dot for graph 89/91
-Running dot for graph 90/91
-Running dot for graph 91/91
-Patching output file 1/16
-Patching output file 2/16
-Patching output file 3/16
-Patching output file 4/16
-Patching output file 5/16
-Patching output file 6/16
-Patching output file 7/16
-Patching output file 8/16
-Patching output file 9/16
-Patching output file 10/16
-Patching output file 11/16
-Patching output file 12/16
-Patching output file 13/16
-Patching output file 14/16
-Patching output file 15/16
-Patching output file 16/16
-symbol cache used 236/65536 hits=12576 misses=236
-lookup cache used 303/65536 hits=684 misses=320
+Running dot for graph 1/72
+Running dot for graph 2/72
+Running dot for graph 3/72
+Running dot for graph 4/72
+Running dot for graph 5/72
+Running dot for graph 6/72
+Running dot for graph 7/72
+Running dot for graph 8/72
+Running dot for graph 9/72
+Running dot for graph 10/72
+Running dot for graph 11/72
+Running dot for graph 12/72
+Running dot for graph 13/72
+Running dot for graph 14/72
+Running dot for graph 15/72
+Running dot for graph 16/72
+Running dot for graph 17/72
+Running dot for graph 18/72
+Running dot for graph 19/72
+Running dot for graph 20/72
+Running dot for graph 21/72
+Running dot for graph 22/72
+Running dot for graph 23/72
+Running dot for graph 24/72
+Running dot for graph 25/72
+Running dot for graph 26/72
+Running dot for graph 27/72
+Running dot for graph 28/72
+Running dot for graph 29/72
+Running dot for graph 30/72
+Running dot for graph 31/72
+Running dot for graph 32/72
+Running dot for graph 33/72
+Running dot for graph 34/72
+Running dot for graph 35/72
+Running dot for graph 36/72
+Running dot for graph 37/72
+Running dot for graph 38/72
+Running dot for graph 39/72
+Running dot for graph 40/72
+Running dot for graph 41/72
+Running dot for graph 42/72
+Running dot for graph 43/72
+Running dot for graph 44/72
+Running dot for graph 45/72
+Running dot for graph 46/72
+Running dot for graph 47/72
+Running dot for graph 48/72
+Running dot for graph 49/72
+Running dot for graph 50/72
+Running dot for graph 51/72
+Running dot for graph 52/72
+Running dot for graph 53/72
+Running dot for graph 54/72
+Running dot for graph 55/72
+Running dot for graph 56/72
+Running dot for graph 57/72
+Running dot for graph 58/72
+Running dot for graph 59/72
+Running dot for graph 60/72
+Running dot for graph 61/72
+Running dot for graph 62/72
+Running dot for graph 63/72
+Running dot for graph 64/72
+Running dot for graph 65/72
+Running dot for graph 66/72
+Running dot for graph 67/72
+Running dot for graph 68/72
+Running dot for graph 69/72
+Running dot for graph 70/72
+Running dot for graph 71/72
+Running dot for graph 72/72
+Patching output file 1/18
+Patching output file 2/18
+Patching output file 3/18
+Patching output file 4/18
+Patching output file 5/18
+Patching output file 6/18
+Patching output file 7/18
+Patching output file 8/18
+Patching output file 9/18
+Patching output file 10/18
+Patching output file 11/18
+Patching output file 12/18
+Patching output file 13/18
+Patching output file 14/18
+Patching output file 15/18
+Patching output file 16/18
+Patching output file 17/18
+Patching output file 18/18
+symbol cache used 219/65536 hits=11525 misses=219
+lookup cache used 289/65536 hits=651 misses=306
 finished...
