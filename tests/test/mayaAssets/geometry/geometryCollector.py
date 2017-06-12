@@ -4,6 +4,7 @@ Gathers geometry assets from the current scene.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
 import test.mayaAssets.geometry.geometryInstance as geometryInstance
@@ -51,3 +52,6 @@ class GeometryCollector(collector.Collector):
             instance.setGeometryList(geomList)
             ctx.addInstance(instance)
         return True
+
+manager = register.getPluginManager()
+manager.registerPlugin(GeometryCollector)

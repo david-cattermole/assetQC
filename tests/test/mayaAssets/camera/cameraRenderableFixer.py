@@ -4,6 +4,7 @@ Validates camera instances.
 
 import maya.cmds
 
+import assetQC.api.register as register
 from assetQC.api.fixer import Fixer
 
 
@@ -23,4 +24,5 @@ class CameraRenderableFixer(Fixer):
         nodeAttr = shape + '.renderable'
         maya.cmds.setAttr(nodeAttr, 1)
 
-
+manager = register.getPluginManager()
+manager.registerPlugin(CameraRenderableFixer)

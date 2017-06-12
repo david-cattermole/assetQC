@@ -2,6 +2,7 @@
 Validates camera instances.
 """
 
+import assetQC.api.register as register
 import assetQC.api.fixer as fixer
 
 
@@ -29,3 +30,5 @@ class CameraPivotFixer(fixer.Fixer):
 
         return
 
+manager = register.getPluginManager()
+manager.registerPlugin(CameraPivotFixer)

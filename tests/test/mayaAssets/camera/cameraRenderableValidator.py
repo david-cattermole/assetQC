@@ -4,6 +4,7 @@ Validates camera instances.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.validator
 import test.mayaAssets.camera.cameraRenderableFixer as cameraRenderableFixer
 
@@ -28,3 +29,5 @@ class CameraRenderableValidator(assetQC.api.validator.Validator):
 
         self.assertTrue(False, msg='Not a renderable camera!')
 
+manager = register.getPluginManager()
+manager.registerPlugin(CameraRenderableValidator)

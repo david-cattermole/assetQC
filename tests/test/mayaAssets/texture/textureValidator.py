@@ -3,6 +3,8 @@ Validates rig instances.
 """
 
 import os
+
+import assetQC.api.register as register
 import assetQC.api.validator as validator
 
 
@@ -42,3 +44,6 @@ class TextureValidator(validator.Validator):
             self.assertTrue(fileExt in TEXTURE_EXTENSIONS, msg=msg)
 
         return
+
+manager = register.getPluginManager()
+manager.registerPlugin(TextureValidator)

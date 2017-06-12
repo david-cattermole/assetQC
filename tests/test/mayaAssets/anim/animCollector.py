@@ -4,6 +4,7 @@ Gathers anim assets from the current scene.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
 import test.mayaAssets.anim.animInstance as animInstance
@@ -62,3 +63,6 @@ class AnimCollector(collector.Collector):
                 ctx.addInstance(instance)
 
         return True
+
+manager = register.getPluginManager()
+manager.registerPlugin(AnimCollector)

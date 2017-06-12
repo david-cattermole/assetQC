@@ -3,6 +3,8 @@ Validates rig instances.
 """
 
 import maya.cmds
+
+import assetQC.api.register as register
 import assetQC.api.validator as validator
 
 
@@ -40,3 +42,6 @@ class RigValidator(validator.Validator):
         msg = msg.format(instance.data)
         self.assertTrue(maya.cmds.objExists(rigSet), msg=msg)
         return
+
+manager = register.getPluginManager()
+manager.registerPlugin(RigValidator)

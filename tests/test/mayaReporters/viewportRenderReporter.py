@@ -6,6 +6,7 @@ import os
 import pprint
 import subprocess
 import maya.cmds
+import assetQC.api.register as register
 import assetQC.api.baseDataObject as baseDataObject
 import assetQC.api.assetInstance as assetInstance
 import assetQC.api.reporter as reporter
@@ -307,3 +308,5 @@ class ViewportRenderReporter(reporter.Reporter):
         return
 
 
+manager = register.getPluginManager()
+manager.registerPlugin(ViewportRenderReporter)

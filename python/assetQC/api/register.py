@@ -11,7 +11,6 @@ __importedModules = []
 
 def getSearchPaths():
     searchPaths = config.getPluginSearchPath()
-    # print 'searchPaths:', searchPaths
     if not searchPaths:
         return []
     tmpPaths = searchPaths.split(os.pathsep)
@@ -19,7 +18,6 @@ def getSearchPaths():
     for path in tmpPaths:
         if path and os.path.isdir(path):
             searchPaths.append(path)
-    # print 'searchPaths:', searchPaths
     return searchPaths
 
 
@@ -30,7 +28,6 @@ class PluginManager(object):
     def registerPlugin(self, classObj):
         if str(classObj) not in self.__plugins:
             self.__plugins[str(classObj)] = classObj
-        print self.__plugins
         return True
 
     def getPlugins(self,

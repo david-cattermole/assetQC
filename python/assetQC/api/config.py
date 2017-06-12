@@ -19,6 +19,9 @@ CONFIG_ENTRY_NAMES = [
     'ASSETQC_PLUGIN_SEARCH_PATH',
 ]
 
+# Stops recursive expansion of config variables.
+EXPAND_LIMIT = 5
+
 
 class memoized(object):
     """
@@ -82,12 +85,9 @@ def __readConfig():
     return data
 
 
-def __getValue(key, expand=True):
+def __getValue(key, expandNum=0):
     """
     Get the value from the environment or config file.
-    
-    :param key: 
-    :return: 
     """
     assert isinstance(key, (str, unicode))
 
@@ -101,109 +101,78 @@ def __getValue(key, expand=True):
         if data and key in data:
             result = data[key]
 
-    if result and expand == True:
-        result = __expandTokens(result)
+    expandNum += 1
+    if result and expandNum < EXPAND_LIMIT:
+        result = __expandTokens(result, expandNum=expandNum)
 
     return result
 
 
-def __expandValue(value):
+def __expandValue(value, expandNum):
     result = value
     for name in CONFIG_ENTRY_NAMES:
         key = '${' + name + '}'
         if key in result:
-            keyValue = __getValue(name, expand=False)
+            keyValue = __getValue(name, expandNum=expandNum)
             result = result.replace(key, keyValue)
     return result
 
 
-def __expandTokens(value):
+def __expandTokens(value, expandNum):
     result = None
     if isinstance(value, (str, unicode)):
-        result = __expandValue(value)
+        result = __expandValue(value, expandNum=expandNum)
     elif isinstance(value, list):
         result = []
         for v in value:
-            v = __expandValue(v)
+            v = __expandValue(v, expandNum=expandNum)
             result.append(v)
     return result
 
 
 def getLoggingConfigPath():
-    """
-
-    :return: 
-    """
     result = __getValue('ASSETQC_LOGGER_CONFIG_PATH')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getBaseDir():
-    """
-    
-    :return: 
-    """
     result = __getValue('ASSETQC_BASE_DIR')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getTempDir():
-    """
-
-    :return: 
-    """
     result = __getValue('ASSETQC_TEMP_DIR')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getTestBaseDir():
-    """
-
-    :return: 
-    """
     result = __getValue('ASSETQC_TEST_BASE_DIR')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getTestTempDir():
-    """
-
-    :return: 
-    """
     result = __getValue('ASSETQC_TEST_TEMP_DIR')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getTestDataDir():
-    """
-
-    :return: 
-    """
     result = __getValue('ASSETQC_TEST_DATA_DIR')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getLoggerDir():
-    """
-    
-    :return: 
-    """
     result = __getValue('ASSETQC_LOGGER_DIR')
     assert isinstance(result, (str, unicode))
     return result
 
 
 def getPluginSearchPath():
-    """
-    
-    :return: 
-    """
     result = ''
     value = __getValue('ASSETQC_PLUGIN_SEARCH_PATH')
     assert isinstance(value, list) or isinstance(value, (str, unicode))

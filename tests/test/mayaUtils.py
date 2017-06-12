@@ -20,7 +20,7 @@ def getLongNameOf(node):
     """Return the full path to the node given.
 
     :param node: Node path.
-    :__type node: str or unicode
+    :type node: str or unicode
 
     :return: str or unicode, the full path to the node.
     """

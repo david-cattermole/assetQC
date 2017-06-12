@@ -2,6 +2,7 @@
 Defines a geometry instance of an asset.
 """
 
+import assetQC.api.register as register
 import test.mayaAssets.mayaInstance as mayaInstance
 
 
@@ -15,3 +16,6 @@ class GeometryInstance(mayaInstance.MayaInstance):
     def setGeometryList(self, values):
         assert isinstance(values, list)
         self.data['geom_list'] = values
+
+manager = register.getPluginManager()
+manager.registerPlugin(GeometryInstance)

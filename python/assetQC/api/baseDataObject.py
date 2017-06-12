@@ -18,6 +18,10 @@ class BaseDataObject(object):
 
     @property
     def data(self):
+        """
+        Data is a dictionary that can contain any python objects / values.
+        Use data to store and pass data a long with this object. 
+        """
         return self.__data
 
     def getClassName(self):

@@ -4,6 +4,7 @@ Gathers camera assets from the current scene.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
 import test.mayaAssets.camera.cameraInstance as cameraInstance
@@ -45,3 +46,6 @@ class CameraCollector(collector.Collector):
                 instance.setShapeNode(str(node))
                 ctx.addInstance(instance)
         return True
+
+manager = register.getPluginManager()
+manager.registerPlugin(CameraCollector)

@@ -17,7 +17,6 @@ import maya.cmds
 # # TODO: Replace with config entry 'ASSETQC_TEST_BASE_DIR'.
 # sys.path.append('/home/davidc/maya/2016/scripts')
 
-
 # configDir = '/home/davidc/dev/mayaScripts/trunk/assetQC/test/config/config.json'
 # # os.putenv('ASSETQC_CONFIG_PATH', configDir)
 # os.environ['ASSETQC_CONFIG_PATH'] = configDir
@@ -25,12 +24,15 @@ import maya.cmds
 import assetQC.api.config as config
 import assetQC.api.lib as lib
 import assetQC.api.context as context
+import assetQC.api.register as register
 import test.mayaAssets.camera.cameraCollector as cameraCollector
 import test.mayaAssets.camera.cameraRenderableValidator as cameraRenderableValidator
 import test.mayaAssets.camera.cameraKeyframeCountValidator as cameraKeyframeCountValidator
 import test.mayaAssets.camera.cameraFilmbackValidator as cameraFilmbackValidator
 import test.mayaAssets.rig.rigCollector as rigCollector
 import test.mayaAssets.rig.rigValidator as rigValidator
+import test.mayaReporters.assignShadersReporter as assignShadersReporter
+import test.mayaReporters.viewportRenderReporter as viewportRenderReporter
 import test.mayaUtils as mayaUtils
 
 
@@ -55,7 +57,7 @@ def test1():
     mayaUtils.saveTestFile('test1_before')
 
     # do checks
-    ctx = context.Context(find=context.FIND_MODE_ALL)
+    ctx = context.Context()
     lib.run(ctx=ctx)
 
     # save the scene
@@ -103,22 +105,25 @@ def test2():
     # save scene before test
     mayaUtils.saveTestFile('test2_before')
 
-    # check context
-    ctx = context.Context(find=context.FIND_MODE_NONE)
+    # Manually specify the plugins...
+    mgr = register.PluginManager()
 
     # camera
-    ctx.addCollectorPlugin(cameraCollector.CameraCollector)
-    ctx.addValidatorPlugin(cameraRenderableValidator.CameraRenderableValidator)
-    ctx.addValidatorPlugin(
-        cameraKeyframeCountValidator.CameraKeyframeCountValidator)
-    ctx.addValidatorPlugin(cameraFilmbackValidator.CameraFilmbackValidator)
+    mgr.registerPlugin(cameraCollector.CameraCollector)
+    mgr.registerPlugin(cameraRenderableValidator.CameraRenderableValidator)
+    mgr.registerPlugin(cameraKeyframeCountValidator.CameraKeyframeCountValidator)
+    mgr.registerPlugin(cameraFilmbackValidator.CameraFilmbackValidator)
 
     # rig
-    ctx.addCollectorPlugin(rigCollector.RigCollector)
-    ctx.addValidatorPlugin(rigValidator.RigValidator)
+    mgr.registerPlugin(rigCollector.RigCollector)
+    mgr.registerPlugin(rigValidator.RigValidator)
 
-    # standardReporters
-    ctx.findReporterPlugins()
+    # reporters
+    mgr.registerPlugin(assignShadersReporter.AssignShadersReporter)
+    mgr.registerPlugin(viewportRenderReporter.ViewportRenderReporter)
+
+    # check context
+    ctx = context.Context(pluginManager=mgr)
 
     # run check
     lib.run(ctx=ctx)
@@ -160,10 +165,7 @@ def test3():
     mayaUtils.saveTestFile('test3_before')
 
     # do checks
-    ctx = context.Context(find=context.FIND_MODE_NONE)
-    ctx.findCollectorPlugins()
-    ctx.findValidatorPlugins()
-    ctx.findReporterPlugins()
+    ctx = context.Context()
     lib.run(ctx=ctx)
 
     # save the scene
@@ -312,7 +314,7 @@ def test7():
     mayaUtils.saveTestFile('test7_before')
 
     # do checks
-    ctx = context.Context(find=context.FIND_MODE_ALL)
+    ctx = context.Context()
     lib.run(ctx=ctx)
 
     # save the scene

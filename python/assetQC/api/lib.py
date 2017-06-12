@@ -15,6 +15,11 @@ import assetQC.api.utils
 from assetQC.api.status import StatusObject, ErrorStatus, WarningStatus, FailureStatus
 import assetQC.api.context as context
 
+import assetQC.api.collector
+import assetQC.api.validator
+import assetQC.api.fixer
+import assetQC.api.reporter
+
 # Percentage
 START_PERCENT = 0
 COLLECTOR_MIN = 1
@@ -32,12 +37,17 @@ def _runCollection(ctx,
                    assetType=None,
                    progressCb=assetQC.api.logger.progress,
                    logger=None):
+    msgBase = 'Collector'
+
     if logger is None:
         name = assetQC.api.logger.BASE_LOG_NAME
         logger = assetQC.api.logger.getLogger(name)
 
-    msgBase = 'Collector'
-    collectors = ctx.getCollectorPlugins(assetType=assetType)
+    manager = ctx.getPluginManager()
+    hostApp = ctx.getHostApp()
+    collectors = manager.getPlugins(classType=assetQC.api.collector.Collector,
+                                    assetType=assetType,
+                                    hostApp=hostApp)
     numCollectors = len(collectors)
 
     msg = 'Collectors Found: {num}'.format(num=numCollectors)
@@ -78,11 +88,11 @@ def _runValidation(ctx,
                    assetType=None,
                    progressCb=assetQC.api.logger.progress,
                    logger=None):
+    msgBase = 'Validate'
+
     if logger is None:
         name = assetQC.api.logger.BASE_LOG_NAME
         logger = assetQC.api.logger.getLogger(name)
-
-    msgBase = 'Validate'
 
     instances = ctx.getInstances(sortByName=True)
     numInstances = len(instances)
@@ -93,11 +103,15 @@ def _runValidation(ctx,
     for i, instance in enumerate(instances):
         name = instance.getName()
         aType = instance.getAssetType()
-
-        validators = ctx.getValidatorPlugins(assetType=aType)
+        manager = ctx.getPluginManager()
+        hostApp = ctx.getHostApp()
+        validators = manager.getPlugins(
+            classType=assetQC.api.validator.Validator,
+            assetType=aType,
+            hostApp=hostApp)
         numValidators = len(validators)
         msg = 'Validators Found (for {atype}): {num}'.format(num=numInstances,
-                                                         atype=aType)
+                                                             atype=aType)
         logger.info(msg)
 
         for j, validatorObj in enumerate(validators):
@@ -163,11 +177,11 @@ def _runValidation(ctx,
 def _runFixers(ctx,
                progressCb=assetQC.api.logger.progress,
                logger=None):
+    msgBase = 'Fixing'
+
     if logger is None:
         name = assetQC.api.logger.BASE_LOG_NAME
         logger = assetQC.api.logger.getLogger(name)
-
-    msgBase = 'Fixing'
 
     instances = ctx.getInstances(sortByName=True)
     numInstances = len(instances)
@@ -259,13 +273,18 @@ def _runReporters(ctx,
                   assetType=None,
                   progressCb=assetQC.api.logger.progress,
                   logger=None):
+    msgBase = 'Processing Output'
+
     if logger is None:
         name = assetQC.api.logger.BASE_LOG_NAME
         logger = assetQC.api.logger.getLogger(name)
 
-    msgBase = 'Processing Output'
-
-    reporters = ctx.getReporterPlugins(assetType=assetType)
+    manager = ctx.getPluginManager()
+    hostApp = ctx.getHostApp()
+    reporters = manager.getPlugins(
+        classType=assetQC.api.reporter.Reporter,
+        assetType=assetType,
+        hostApp=hostApp)
     numReporters = len(reporters)
 
     msg = 'Reporters Found: {num}'.format(num=numReporters)
@@ -336,6 +355,7 @@ def run(ctx=None,
                                        progressCb,
                                        logger=logger)
     if not ctx:
+        print 'created new context'
         ctx = context.Context()
     assert isinstance(ctx, context.Context)
 

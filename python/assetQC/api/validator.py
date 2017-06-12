@@ -133,7 +133,7 @@ class Validator(baseDataObject.BaseDataObject,
 
         :param msg: Message to log.
         :type msg: str
-        :param num: Percentage of the progess, between 0 and 100 inclusive.
+        :param num: Percentage of the progress, between 0 and 100 inclusive.
         :type num: int
         :return: None
         """

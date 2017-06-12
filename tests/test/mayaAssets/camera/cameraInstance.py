@@ -3,7 +3,7 @@ Defines a camera instance of an asset.
 """
 
 import maya.cmds
-
+import assetQC.api.register as register
 import test.mayaAssets.mayaInstance as mayaInstance
 
 
@@ -26,3 +26,6 @@ class CameraInstance(mayaInstance.MayaInstance):
         assert isinstance(value, str)
         assert maya.cmds.objExists(value)
         self.data['shape'] = value
+
+manager = register.getPluginManager()
+manager.registerPlugin(CameraInstance)

@@ -4,6 +4,7 @@ Gathers camera assets from the current scene.
 
 import test.standardUtils as stdUtils
 import test.standardAssets.camera.cameraInstance as cameraInstance
+import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
 
@@ -21,11 +22,8 @@ class CameraCollector(collector.Collector):
         assert isinstance(ctx, context.Context)
         root = ctx.getRootDirectory()
         assets = stdUtils.listAssets(root)
-        # print 'assets', assets
 
         for key, item in assets.iteritems():
-            # print 'key', key
-            # print 'item', item
             if not key:
                 continue
             if item['type'] not in self.assetTypes:
@@ -36,3 +34,6 @@ class CameraCollector(collector.Collector):
                 instance.setFilePath(key)
                 ctx.addInstance(instance)
         return True
+
+manager = register.getPluginManager()
+manager.registerPlugin(CameraCollector)

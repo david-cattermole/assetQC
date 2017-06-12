@@ -2,6 +2,7 @@
 Defines a geometry instance of an asset.
 """
 
+import assetQC.api.register as register
 import test.mayaAssets.mayaInstance as mayaInstance
 
 
@@ -22,3 +23,6 @@ class AnimInstance(mayaInstance.MayaInstance):
     def setCurveNodeList(self, values):
         assert isinstance(values, list)
         self.data['curve_node_list'] = values
+
+manager = register.getPluginManager()
+manager.registerPlugin(AnimInstance)

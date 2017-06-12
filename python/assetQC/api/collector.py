@@ -122,12 +122,12 @@ class Collector(baseDataObject.BaseDataObject,
 
         :param msg: Message to log.
         :type msg: str
-        :param num: Percentage of the progess, between 0 and 100 inclusive.
+        :param num: Percentage of the progress, between 0 and 100 inclusive.
         :type num: int
         :return: None
         """
         msg = '{0}% {1}'.format(num, msg)
-        return self.__logger.log(logger.LEVEL_PROGRESS, msg)
+        return self.__logger.log(assetQC.api.logger.LEVEL_PROGRESS, msg)
 
     def logWarning(self, msg):
         """
@@ -147,7 +147,7 @@ class Collector(baseDataObject.BaseDataObject,
         :type msg: str
         :return: None
         """
-        return self.__logger.log(logger.LEVEL_FAILURE, msg)
+        return self.__logger.log(assetQC.api.logger.LEVEL_FAILURE, msg)
 
     def logError(self, msg):
         """

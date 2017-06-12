@@ -4,6 +4,7 @@ Validates camera instances.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.validator as validator
 import test.mayaAssets.camera.cameraFilmbackFixer as cameraFilmbackFixer
 
@@ -37,3 +38,6 @@ class CameraFilmbackValidator(validator.Validator):
         secondValue = 2.40 / 2.54  # 24.0mm
         self.assertAlmostEqual(firstValue, secondValue, msg=msg)
         return
+
+manager = register.getPluginManager()
+manager.registerPlugin(CameraFilmbackValidator)

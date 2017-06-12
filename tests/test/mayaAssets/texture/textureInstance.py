@@ -2,7 +2,7 @@
 Defines a camera instance of an asset.
 """
 
-# from assetQC.api_tests.assetInstance import AssetInstance
+import assetQC.api.register as register
 import test.mayaAssets.mayaInstance as mayaInstance
 
 
@@ -52,3 +52,6 @@ class TextureInstance(mayaInstance.MayaInstance):
     def setFileName(self, value):
         assert isinstance(value, str)
         self.data['fileName'] = value
+
+manager = register.getPluginManager()
+manager.registerPlugin(TextureInstance)

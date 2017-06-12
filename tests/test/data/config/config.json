@@ -13,6 +13,13 @@
     "${ASSETQC_BASE_DIR}/tests/test/standardAssets/shader:",
     "${ASSETQC_BASE_DIR}/tests/test/standardAssets/geometry:",
     "${ASSETQC_BASE_DIR}/tests/test/standardAssets/anim:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/camera:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/rig:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/texture:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/shader:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/geometry:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/anim:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaReporters:",
     "${ASSETQC_BASE_DIR}/tests/test/standardReporters:"
   ]
 }

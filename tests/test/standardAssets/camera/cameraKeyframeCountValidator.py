@@ -2,6 +2,7 @@
 Validates camera instances.
 """
 
+import assetQC.api.register as register
 import assetQC.api.validator as validator
 
 
@@ -30,3 +31,5 @@ class CameraKeyframeCountValidator(validator.Validator):
         # self.assertTrue(transformCount or shapeCount, msg=msg)
         return
 
+manager = register.getPluginManager()
+manager.registerPlugin(CameraKeyframeCountValidator)

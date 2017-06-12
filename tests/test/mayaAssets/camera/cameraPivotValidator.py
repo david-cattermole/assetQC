@@ -4,6 +4,7 @@ Validates camera instances.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.validator as validator
 import test.mayaAssets.camera.cameraPivotFixer as cameraPivotFixer
 
@@ -32,3 +33,6 @@ class CameraPivotValidator(validator.Validator):
                 firstValue = maya.cmds.getAttr(transform + '.' + attr + comp)
                 self.assertAlmostEqual(firstValue, 0.0, msg=msg)
         return
+
+manager = register.getPluginManager()
+manager.registerPlugin(CameraPivotValidator)

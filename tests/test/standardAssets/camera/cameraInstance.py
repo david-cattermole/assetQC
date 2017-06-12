@@ -2,6 +2,7 @@
 Defines a camera instance of an asset.
 """
 
+import assetQC.api.register as register
 import test.standardAssets.standardInstance as standardInstance
 
 
@@ -15,3 +16,7 @@ class CameraInstance(standardInstance.StandardInstance):
     # def setTransformNode(self, value):
     #     assert isinstance(value, str)
     #     self.data['transform'] = value
+
+
+manager = register.getPluginManager()
+manager.registerPlugin(CameraInstance)

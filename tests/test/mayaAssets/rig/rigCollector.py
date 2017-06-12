@@ -4,6 +4,7 @@ Gathers rig assets from the current scene.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
 import test.mayaAssets.rig.rigInstance as rigInstance
@@ -66,3 +67,6 @@ class RigCollector(collector.Collector):
             else:
                 continue
         return
+
+manager = register.getPluginManager()
+manager.registerPlugin(RigCollector)

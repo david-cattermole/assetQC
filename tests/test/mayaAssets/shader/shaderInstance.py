@@ -2,6 +2,7 @@
 Defines a camera instance of an asset.
 """
 
+import assetQC.api.register as register
 import test.mayaAssets.mayaInstance as mayaInstance
 
 
@@ -15,3 +16,6 @@ class ShaderInstance(mayaInstance.MayaInstance):
     def setAttrValues(self, value):
         assert isinstance(value, dict)
         self.data['attrValues'] = value
+
+manager = register.getPluginManager()
+manager.registerPlugin(ShaderInstance)

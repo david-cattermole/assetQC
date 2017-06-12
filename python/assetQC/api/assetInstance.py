@@ -6,7 +6,7 @@ AssetInstance
 - Stores an asset type to be used for look up of the validation plugin to use.
 """
 
-import assetQC.api.logger as logger
+import assetQC.api.logger
 import assetQC.api.baseDataObject as baseDataObject
 
 
@@ -16,14 +16,14 @@ class AssetInstance(baseDataObject.BaseDataObject):
     """
     def __init__(self, name, assetType=None):
         super(AssetInstance, self).__init__()
-        assert isinstance(name, str)
+        assert isinstance(name, str) and name
         assert assetType is None or isinstance(assetType, str)
         self.__name = name
         self.__assetType = assetType
         self.__statuses = {}
         self.__fixers = []
-        logName = logger.BASE_LOG_NAME + '.' + name
-        self.__logger = logger.getLogger(logName)
+        logName = assetQC.api.logger.BASE_LOG_NAME + '.' + name
+        self.__logger = assetQC.api.logger.getLogger(logName)
 
     def getName(self):
         """
@@ -98,12 +98,12 @@ class AssetInstance(baseDataObject.BaseDataObject):
 
         :param msg: Message to log.
         :type msg: str
-        :param num: Percentage of the progess, between 0 and 100 inclusive.
+        :param num: Percentage of the progress, between 0 and 100 inclusive.
         :type num: int
         :return: None
         """
         msg = '{0}% {1}'.format(num, msg)
-        return self.__logger.log(logger.LEVEL_PROGRESS, msg)
+        return self.__logger.log(assetQC.api.logger.LEVEL_PROGRESS, msg)
 
     def logWarning(self, msg):
         """
@@ -123,7 +123,7 @@ class AssetInstance(baseDataObject.BaseDataObject):
         :type msg: str
         :return: None
         """
-        return self.__logger.log(logger.LEVEL_FAILURE, msg)
+        return self.__logger.log(assetQC.api.logger.LEVEL_FAILURE, msg)
 
     def logError(self, msg):
         """

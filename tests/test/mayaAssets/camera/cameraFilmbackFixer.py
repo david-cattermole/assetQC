@@ -4,6 +4,7 @@ Validates camera instances.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import assetQC.api.fixer as fixer
 
 
@@ -27,3 +28,5 @@ class CameraFilmbackFixer(fixer.Fixer):
         maya.cmds.setAttr(nodeAttr, 2.40 / 2.54)  # 24.0mm
         return
 
+manager = register.getPluginManager()
+manager.registerPlugin(CameraFilmbackFixer)

@@ -4,6 +4,7 @@ Defines a rig instance of an asset.
 
 import maya.cmds
 
+import assetQC.api.register as register
 import test.mayaAssets.mayaInstance as mayaInstance
 
 
@@ -31,3 +32,6 @@ class RigInstance(mayaInstance.MayaInstance):
     def setGeometrySetNode(self, value):
         assert maya.cmds.objExists(value)
         self.data['geom_set'] = value
+
+manager = register.getPluginManager()
+manager.registerPlugin(RigInstance)
