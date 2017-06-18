@@ -7,13 +7,14 @@ echo "ASSETQC_BASE_DIR:" ${ASSETQC_BASE_DIR}
 echo "ASSETQC_CONFIG_PATH:" ${ASSETQC_CONFIG_PATH}
 
 ## run API tests
-#nosetests ./tests/test/runTests.py ./python ./tests/test  \
-#   --with-coverage --cover-erase --cover-tests --cover-package=assetQC
+#nosetests ./tests/test/runTests.py ./python ./tests/test \
+#   --with-coverage --cover-erase --cover-tests \
+#   --cover-package=assetQC
 
 # run API tests with coverage branches (only supported in 'nose 4.x')
-nosetests ./test/runTests.py ./python ./test  \
+nosetests ./test/runTests.py ./python ./tests/test \
    --with-coverage --cover-erase --cover-tests \
-   --cover-branches --cover-package=assetQC
+   --cover-package=assetQC --cover-branches
 
 # Run Maya based tests (if 'mayapy' exists)
 if command -v mayapy > /dev/null; then
