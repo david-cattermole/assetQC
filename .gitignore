@@ -1,0 +1,5 @@
+*.pyc
+docs
+temp
+assetqc.log
+.coverage
