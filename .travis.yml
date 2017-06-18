@@ -32,6 +32,7 @@ python:
 # Command to install dependencies
 install:
   - "pip install coverage"
+  - "pip install coveralls"
 #  - "pip install -r requirements.txt"
 
 # Build your code e.g. by calling make
@@ -40,6 +41,7 @@ script:
 
 # Generate and deploy documentation
 after_success:
+  - coveralls
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocs.sh
   - ./generateDocs.sh
