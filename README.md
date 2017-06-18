@@ -17,9 +17,10 @@ This Python module is not an end-user tool, but a framework people can use as a 
 - Per-asset exception handling framework
 - Example tests for a rudimentary computer graphics pipeline.
 
-## Build Status 
+## Build Status and Coverage 
 
 [![Build Status](https://travis-ci.org/david-cattermole/assetQC.svg?branch=master)](https://travis-ci.org/david-cattermole/assetQC)
+[![Coverage Status](https://coveralls.io/repos/github/david-cattermole/assetQC/badge.svg?branch=master)](https://coveralls.io/github/david-cattermole/assetQC?branch=master)
 
 ## Usage
 
@@ -58,7 +59,7 @@ See the [./test/](https://github.com/david-cattermole/assetQC/tree/master/test/)
 
 - ASSETQC_BASE_DIR
   - The base directory for the assetQC module.
-  - Example; _"/home/davidc/dev/mayaScripts/trunk/assetQC"_
+  - Example; _"/home/user/dev/assetQC"_
   
 - ASSETQC_LOGGER_CONFIG_PATH
   - Example; _"${ASSETQC_BASE_DIR}/test/"_
@@ -90,7 +91,7 @@ _To be written._
 
 ### Dependencies
 
-- Python 2.7.x
+- Python 2.6+
 
 ### Optional Dependencies
 
