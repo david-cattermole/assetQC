@@ -1,6 +1,6 @@
 # Asset Quality Check (QC)
 
-Framework designed to collect, validate and report asset data for Animation and Visual Effects applications.
+Framework designed to collect, validate and report asset data for Animation and Visual Effects applications. The API documentation can be found [here](https://david-cattermole.github.io/assetQC/html/index.html).
 
 This framework is agnostic to software application but was primarily designed with Autodesk Maya in mind. Other software applications may work, but are currently untested.
 
@@ -48,42 +48,45 @@ API Documentation can be found [here](https://david-cattermole.github.io/assetQC
 
 ### Running
 
-`
-$ env ASSETQC_BASE_DIR='/home/davidc/maya/2016/scripts'
-sys.path.append('/home/davidc/maya/2016/scripts')
-`
+Set the 'ASSETQC_BASE_DIR' environment variable before running:
+
+`$ env ASSETQC_BASE_DIR='/home/user/maya/2016/scripts/assetQC'`
+
+Or use this in Python code:
+
+`sys.path.append('/home/user/maya/2016/scripts/assetQC')`
 
 See the [./test/](https://github.com/david-cattermole/assetQC/tree/master/test/) directory for a non-production example usage of assetQC; [./test/mayaAssets/](https://github.com/david-cattermole/assetQC/tree/master/test/mayaAssets) contains the maya specific example code.
 
 ### Configuration
 
-- ASSETQC_BASE_DIR
+- `ASSETQC_BASE_DIR`
   - The base directory for the assetQC module.
-  - Example; _"/home/user/dev/assetQC"_
+  - Example; `/home/user/dev/assetQC`
   
-- ASSETQC_LOGGER_CONFIG_PATH
-  - Example; _"${ASSETQC_BASE_DIR}/test/"_
+- `ASSETQC_LOGGER_CONFIG_PATH`
+  - Example; `${ASSETQC_BASE_DIR}/test/`
   
-- ASSETQC_LOGGER_DIR
-  - Example; _"${ASSETQC_BASE_DIR}/test/"_
+- `ASSETQC_LOGGER_DIR`
+  - Example; `${ASSETQC_BASE_DIR}/test/`
   
-- ASSETQC_TEST_BASE_DIR
+- `ASSETQC_TEST_BASE_DIR`
   - The base directory for the test functions.
-  - Example; _"${ASSETQC_BASE_DIR}/test/"_
+  - Example; `${ASSETQC_BASE_DIR}/test/`
   
-- ASSETQC_TEST_TEMP_DIR
-  - Example; _"${ASSETQC_BASE_DIR}/test/tmp/"_
+- `ASSETQC_TEST_TEMP_DIR`
+  - Example; `${ASSETQC_BASE_DIR}/test/tmp/`
   
-- ASSETQC_TEST_DATA_DIR
-  - Example; _"${ASSETQC_TEMP_BASE_DIR}/test/data"_
+- `ASSETQC_TEST_DATA_DIR`
+  - Example; `${ASSETQC_TEMP_BASE_DIR}/test/data`
   
-- ASSETQC_PLUGIN_SEARCH_PATH
+- `ASSETQC_PLUGIN_SEARCH_PATH`
   - Search in these directories for plugins.
-  - Example; _"${ASSETQC_TEMP_BASE_DIR}/:${ASSETQC_TEMP_BASE_DIR}/mayaAssets/camera"_
+  - Example; `${ASSETQC_TEMP_BASE_DIR}/:${ASSETQC_TEMP_BASE_DIR}/mayaAssets/camera`
   
-- ASSETQC_TEMP_DIR
+- `ASSETQC_TEMP_DIR`
   - A temporary directory (used only test)
-  - Example; _"/tmp/assetQC"_
+  - Example; `/tmp/assetQC`
 
 ## Install
 
