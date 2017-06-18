@@ -56,7 +56,7 @@ Or use this in Python code:
 
 `sys.path.append('/home/user/maya/2016/scripts/assetQC')`
 
-See the [./test/](https://github.com/david-cattermole/assetQC/tree/master/test/) directory for a non-production example usage of assetQC; [./test/mayaAssets/](https://github.com/david-cattermole/assetQC/tree/master/test/mayaAssets) contains the maya specific example code.
+See the [./tests/test/](https://github.com/david-cattermole/assetQC/tree/master/tests/test/) directory for a non-production example usage of assetQC; [./tests/test/mayaAssets/](https://github.com/david-cattermole/assetQC/tree/master/tests/test/mayaAssets) contains the maya specific example code.
 
 ### Configuration
 
