@@ -17,10 +17,11 @@ This Python module is not an end-user tool, but a framework people can use as a 
 - Per-asset exception handling framework
 - Example tests for a rudimentary computer graphics pipeline.
 
-## Build Status and Coverage 
+## Project Status 
 
 [![Build Status](https://travis-ci.org/david-cattermole/assetQC.svg?branch=master)](https://travis-ci.org/david-cattermole/assetQC)
 [![Coverage Status](https://coveralls.io/repos/github/david-cattermole/assetQC/badge.svg?branch=master)](https://coveralls.io/github/david-cattermole/assetQC?branch=master)
+[![Code Health](https://landscape.io/github/david-cattermole/assetQC/master/landscape.svg?style=flat)](https://landscape.io/github/david-cattermole/assetQC/master)
 
 ## Usage
 
