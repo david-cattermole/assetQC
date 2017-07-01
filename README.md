@@ -4,7 +4,7 @@ Framework designed to collect, validate and report asset data for Animation and 
 
 This framework is agnostic to software application but was primarily designed with Autodesk Maya in mind. Other software applications may work, but are currently untested.
 
-assetQC is written in Python and is easily extendable. The tests contain simple examples for a (non-functioning) computer graphics pipeline.
+assetQC is written in Python, supported on Linux and Window, and is easily extensible. The tests contain simple examples for a (non-functioning) computer graphics pipeline.
 
 This Python module is not an end-user tool, but a framework people can use as a basis for data validation.
 
@@ -95,7 +95,9 @@ _To be written._
 
 ### Dependencies
 
-- Python 2.6+
+- Python 2.6+ (on Windows and Linux)
+- Coverage (python package)
+- Nose (python package)
 
 ### Optional Dependencies
 
