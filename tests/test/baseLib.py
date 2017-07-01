@@ -32,4 +32,9 @@ class BaseCase(unittest.TestCase):
         return
 
     def rootPath(self):
-        return '/tmp/assetQC'
+        path = '/tmp/assetQC'
+        if os.name == 'nt':
+            path = 'C:\\tmp\\assetQC'
+        return os.path.abspath(path)
+
+    
