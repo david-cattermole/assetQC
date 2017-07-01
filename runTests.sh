@@ -6,15 +6,15 @@ export ASSETQC_CONFIG_PATH="${ASSETQC_BASE_DIR}/tests/test/data/config/config.js
 echo "ASSETQC_BASE_DIR:" ${ASSETQC_BASE_DIR}
 echo "ASSETQC_CONFIG_PATH:" ${ASSETQC_CONFIG_PATH}
 
-## run API tests
-#nosetests ./tests/test/runTests.py ./python ./tests/test \
-#   --with-coverage --cover-erase --cover-tests \
-#   --cover-package=assetQC
-
-# run API tests with coverage branches (only supported in 'nose 4.x')
+# run API tests without coverage branches
 nosetests ./tests/test/runTests.py ./python ./tests/test \
-   --with-coverage --cover-erase --cover-tests \
-   --cover-package=assetQC --cover-branches
+  --with-coverage --cover-erase --cover-tests \
+  --cover-package=assetQC
+
+# # run API tests with coverage branches (only supported in 'nose 4.x')
+# nosetests ./tests/test/runTests.py ./python ./tests/test \
+#    --with-coverage --cover-erase --cover-tests \
+#    --cover-package=assetQC --cover-branches
 
 # Run Maya based tests (if 'mayapy' exists)
 if command -v mayapy > /dev/null; then
