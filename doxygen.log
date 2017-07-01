@@ -369,6 +369,6 @@ Patching output file 15/18
 Patching output file 16/18
 Patching output file 17/18
 Patching output file 18/18
-symbol cache used 219/65536 hits=11525 misses=219
-lookup cache used 289/65536 hits=651 misses=306
+symbol cache used 221/65536 hits=11674 misses=221
+lookup cache used 291/65536 hits=655 misses=308
 finished...
