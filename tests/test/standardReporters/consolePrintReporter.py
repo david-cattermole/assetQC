@@ -4,6 +4,7 @@
 import assetQC.api.baseDataObject as baseDataObject
 import assetQC.api.assetInstance as assetInstance
 import assetQC.api.reporter as reporter
+import assetQC.api.register as register
 import assetQC.api.context as context
 import assetQC.api.utils as utils
 
@@ -35,4 +36,5 @@ class ConsolePrintReporter(reporter.Reporter):
             self.logInfo(line)
         return
 
-
+manager = register.getPluginManager()
+manager.registerPlugin(ConsolePrintReporter)

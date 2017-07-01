@@ -14,7 +14,7 @@ Stores the following:
 """
 
 import os
-import pwd
+import getpass
 import socket
 
 import assetQC.api.register
@@ -44,7 +44,12 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
         # user data
         self.__environ = dict(os.environ)
         self.__operatingSystem = os.name
-        self.__userName = pwd.getpwuid(os.geteuid()).pw_name
+        self.__userName = None
+        if os.name == 'nt':
+            self.__userName = getpass.getuser()
+        else:
+            import pwd
+            self.__userName = pwd.getpwuid(os.geteuid()).pw_name
         self.__hostName = socket.gethostname()
         self.__hostApplication = assetQC.api.utils.HOST_APP_ALL
         if hostApp is None:
@@ -59,6 +64,7 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
         self.__pluginManager = None
         if isinstance(pluginManager, assetQC.api.register.PluginManager):
             self.__pluginManager = pluginManager
+            assetQC.api.register.importAllPlugins()
         else:
             self.__pluginManager = assetQC.api.register.getPluginManager()
             assetQC.api.register.importAllPlugins()

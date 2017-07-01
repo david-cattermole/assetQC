@@ -16,30 +16,6 @@ sys.path.insert(0, test_path)
 sys.path.insert(0, package_path)
 
 
-import test.baseLib
-import test.standardUtils as stdUtils
-import assetQC.api.lib as lib
-import assetQC.api.context
-import assetQC.api.config as config
-
-
-class TestOverall(test.baseLib.BaseCase):
-    def test_one(self):
-        print 'Test Name:', self.id()
-        root = self.rootPath()
-        data = {
-            'filmBackWidth': 36.0,
-            'filmBackHeight': 24.0
-        }
-        stdUtils.createCameraAsset(name='renderCam', root=root, data=data)
-
-        # do checks
-        ctx = assetQC.api.context.Context(root=root)
-        lib.run(ctx=ctx)
-
-        return
-
-
 if __name__ == '__main__':
     exe = sys.executable
     exe_path = None
@@ -74,5 +50,5 @@ if __name__ == '__main__':
         cov.stop()
         cov.save()
         cov.report()
-        # cov.html_report()
+        cov.html_report()
 

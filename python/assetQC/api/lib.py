@@ -355,7 +355,7 @@ def run(ctx=None,
                                        progressCb,
                                        logger=logger)
     if not ctx:
-        print 'created new context'
+        print 'Created new context'
         ctx = context.Context()
     assert isinstance(ctx, context.Context)
 

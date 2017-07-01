@@ -21,8 +21,13 @@ class CameraFilmbackValidator(validator.Validator):
         assert self.getInstance()
         instance = self.getInstance()
         self.assertEqual(instance.getAssetType(), 'camera')
-        return
 
+        # Film Back
+        filmBackWidth = instance.getFilmBackWidth()
+        filmBackHeight = instance.getFilmBackHeight()
+        self.assertAlmostEqual(filmBackWidth, 36.0)
+        self.assertAlmostEqual(filmBackHeight, 24.0)
+        return
 
 manager = register.getPluginManager()
 manager.registerPlugin(CameraFilmbackValidator)

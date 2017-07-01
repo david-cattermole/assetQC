@@ -8,6 +8,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 import assetQC.api.reporter as reporter
+import assetQC.api.register as register
 import assetQC.api.context as context
 import assetQC.api.utils as utils
 
@@ -66,3 +67,5 @@ class EmailSummaryReporter(reporter.Reporter):
         return
 
 
+manager = register.getPluginManager()
+manager.registerPlugin(EmailSummaryReporter)

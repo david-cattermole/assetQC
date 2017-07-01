@@ -14,6 +14,9 @@ class AssetInstance(baseDataObject.BaseDataObject):
     """
     Defines an asset.
     """
+    priority = 1
+    enable = True
+    
     def __init__(self, name, assetType=None):
         super(AssetInstance, self).__init__()
         assert isinstance(name, str) and name

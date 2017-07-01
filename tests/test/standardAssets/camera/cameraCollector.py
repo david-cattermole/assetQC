@@ -21,17 +21,15 @@ class CameraCollector(collector.Collector):
     def run(self, ctx):
         assert isinstance(ctx, context.Context)
         root = ctx.getRootDirectory()
-        assets = stdUtils.listAssets(root)
+        assets = stdUtils.getAssets(root)
 
-        for key, item in assets.iteritems():
-            if not key:
+        for asset in assets:
+            assetType = asset.getType()
+            if assetType not in self.assetTypes:
                 continue
-            if item['type'] not in self.assetTypes:
-                continue
-            name = item['name']
+            name = asset.getName()
             if not ctx.hasInstance(name):
-                instance = cameraInstance.CameraInstance(name)
-                instance.setFilePath(key)
+                instance = cameraInstance.CameraInstance(name, asset)
                 ctx.addInstance(instance)
         return True
 

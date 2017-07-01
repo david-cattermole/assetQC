@@ -17,6 +17,8 @@ class CameraFilmbackFixer(fixer.Fixer):
 
     def run(self, context):
         instance = self.getInstance()
+        instance.setFilmBackWidth(36.0)
+        instance.setFilmBackHeight(24.0)
         return
 
 manager = register.getPluginManager()

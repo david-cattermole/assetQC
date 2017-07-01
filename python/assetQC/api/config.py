@@ -79,9 +79,11 @@ def __readConfig():
     configPath = os.getenv('ASSETQC_CONFIG_PATH', None)
     data = {}
     if configPath and os.path.isfile(configPath):
+        # print 'assetQC: Reading Configuration:', configPath
         data = __readData(configPath)
+        # print 'assetQC: Configuration Read Successfully:', configPath
     else:
-        raise ValueError('Configuration file cannot be found.')
+        raise ValueError('assetQC: Configuration file cannot be found.')
     return data
 
 
@@ -175,9 +177,13 @@ def getLoggerDir():
 def getPluginSearchPath():
     result = ''
     value = __getValue('ASSETQC_PLUGIN_SEARCH_PATH')
-    assert isinstance(value, list) or isinstance(value, (str, unicode))
+    assert isinstance(value, list) or isinstance(value, (basestring))
     if isinstance(value, list):
         for v in value:
+            v = v.replace('/', os.sep)
+            if v.endswith(':'):
+                i = len(v) - 1
+                v = v[0:-1] + str(os.pathsep)
             result += v
     elif isinstance(value, (str, unicode)):
         result = value

@@ -21,14 +21,18 @@ class CameraKeyframeCountValidator(validator.Validator):
         instance = self.getInstance()
         self.assertEqual(instance.getAssetType(), 'camera')
 
-        # shape = instance.data['shape']
-        # transform = instance.data['transform']
-        #
-        # msg = 'No keyframes on camera.'
-        # transformCount = maya.cmds.keyframe(transform, query=True, keyframeCount=True)
-        # shapeCount = maya.cmds.keyframe(shape, query=True, keyframeCount=True)
-        #
-        # self.assertTrue(transformCount or shapeCount, msg=msg)
+        # # Film Back
+        # filmBackWidth = instance.getFilmBackWidth()
+        # filmBackHeight = instance.getFilmBackHeight()
+        # self.assertAlmostEqual(filmBackWidth, 36.0)
+        # self.assertAlmostEqual(filmBackHeight, 24.0)
+
+        # Transforms
+        num = 0
+        transform = instance.getTransform()
+        for attr in transform:
+            num += len(attr)
+        self.assertNotEqual(num, 0)
         return
 
 manager = register.getPluginManager()
