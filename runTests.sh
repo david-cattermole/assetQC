@@ -2,7 +2,7 @@
 
 #
 export ASSETQC_BASE_DIR="${PWD}"
-export ASSETQC_CONFIG_PATH="${ASSETQC_BASE_DIR}/tests/test/data/config/config.json"
+export ASSETQC_CONFIG_PATH="${ASSETQC_BASE_DIR}/tests/test/data/config/config_linux.json"
 echo "ASSETQC_BASE_DIR:" ${ASSETQC_BASE_DIR}
 echo "ASSETQC_CONFIG_PATH:" ${ASSETQC_CONFIG_PATH}
 

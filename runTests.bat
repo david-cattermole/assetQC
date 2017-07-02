@@ -2,7 +2,7 @@
 
 setlocal
 set ASSETQC_BASE_DIR=D:\Dev\assetQC\
-set ASSETQC_CONFIG_PATH=%ASSETQC_BASE_DIR%\tests\test\data\config\config.json
+set ASSETQC_CONFIG_PATH=%ASSETQC_BASE_DIR%\tests\test\data\config\config_windows.json
 REM echo "ASSETQC_BASE_DIR:" ${ASSETQC_BASE_DIR}
 REM echo "ASSETQC_CONFIG_PATH:" ${ASSETQC_CONFIG_PATH}
 
