@@ -26,75 +26,49 @@ LEVEL_FAILURE = 35
 LEVEL_ERROR = std_logging.ERROR  # 40
 LEVEL_CRITICAL = std_logging.CRITICAL  # 50
 
-# Configure Logger
-std_logging.addLevelName(LEVEL_PROGRESS, 'PROGRESS')
-std_logging.addLevelName(LEVEL_FAILURE, 'FAILURE')
 
-# logger = std_logging.getLogger(BASE_LOG_NAME)
-#
-# # create console handler and set level to debug
-# ch = std_logging.StreamHandler()
-# ch.setLevel(std_logging.DEBUG)
-#
-# # create formatter
-# # fmt = "%(levelname)s : %(name)s : %(asctime)s : %(message)s"
-# fmt = "%(levelname)s : %(name)s : %(message)s"
-# formatter = std_logging.Formatter(fmt)
-# ch.setFormatter(formatter)
-#
-# # set level
-# logger.setLevel(std_logging.DEBUG)
-#
-# # add ch to logger
-# logger.addHandler(ch)
+class AssetQCLogger(std_logging.Logger):
+    """
+    Logger class for AssetQC project.
+    
+    Added a few helper functions for 'progress' and 'failure'.
+     
+    All the standard logging functions are in the base class, such as:
+    - info
+    - warning
+    - error
+    - debug
+    """
+    def __init__(self, name):
+        std_logging.Logger.__init__(self, name)
+
+    def progress(self, msg, num, **kwargs):
+        msg = '{0}% {1}'.format(num, msg)
+        self.log(LEVEL_PROGRESS, msg, **kwargs)
+
+    def failure(self, msg, **kwargs):
+        self.log(LEVEL_FAILURE, msg, **kwargs)
 
 
-def getLogger(name):
+def getLogger(name=BASE_LOG_NAME):
+    """
+    
+    :param name: The logger dot-separated name.
+    :type name: str
+    :rtype: std_logging.Manager
+    :return: Logging object.
+    """
     assert isinstance(name, str)
     logConfigPath = config.getLoggingConfigPath()
-    logConfig = std_logging_config.fileConfig(logConfigPath)
-    return std_logging.getLogger(BASE_LOG_NAME)
 
+    # Set the logger class.
+    std_logging.setLoggerClass(AssetQCLogger)
 
-def info(msg, logger=None):
-    # if logger:
-    #     logger.info(msg)
-    # else:
-    getLogger(BASE_LOG_NAME).info(msg)
+    # Configure Logger
+    std_logging.addLevelName(LEVEL_PROGRESS, 'PROGRESS')
+    std_logging.addLevelName(LEVEL_FAILURE, 'FAILURE')
+    std_logging_config.fileConfig(logConfigPath)
 
-
-def progress(msg, num, logger=None):
-    msg = '{0}% {1}'.format(num, msg)
-    # if logger:
-    #     logger.log(LEVEL_PROGRESS, msg)
-    # else:
-    getLogger(BASE_LOG_NAME).log(LEVEL_PROGRESS, msg)
-
-
-def warning(msg, logger=None):
-    # if logger:
-    #     logger.warning(msg)
-    # else:
-    getLogger(BASE_LOG_NAME).warning(msg)
-
-
-def failure(msg, logger=None):
-    # if logger:
-    #     logger.log(LEVEL_FAILURE, msg)
-    # else:
-    getLogger(BASE_LOG_NAME).log(LEVEL_FAILURE, msg)
-
-
-def error(msg, logger=None):
-    # if logger:
-    #     logger.error(msg)
-    # else:
-    getLogger(BASE_LOG_NAME).error(msg)
-
-
-def debug(msg, logger=None):
-    # if logger:
-    #     logger.error(msg)
-    # else:
-    getLogger(BASE_LOG_NAME).debug(msg)
-
+    logger = std_logging.getLogger(name)
+    assert isinstance(logger, AssetQCLogger)
+    return logger

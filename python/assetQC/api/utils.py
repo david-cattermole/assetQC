@@ -31,23 +31,20 @@ def progressNum(index, totalNum, minNum, maxNum):
 
 def printProgressNum(msg, num, progressCb, logger=None):
     """
-    
-    :param msg: 
-    :param num: 
-    :param progressCb: 
-    :param logger: 
-    :return: 
+    Print a progress number to the log. 
     """
     if progressCb:
         progressCb(msg, num)
-    else:
-        logger.progress(msg, num, logger=logger)
+    elif logger is not None:
+        assert isinstance(logger, assetQC.api.logger.AssetQCLogger)
+        logger.progress(msg, num)
 
 
 def printProgress(msg, index, total, minNum, maxNum, progressCb):
     """
+    Print a progress number to the log.
     
-    :param msg: 
+    :param msg: Text for the progress. For example the 'step' that has progress.
     :param index: 
     :param total: 
     :param minNum: 
@@ -56,14 +53,15 @@ def printProgress(msg, index, total, minNum, maxNum, progressCb):
     :return: 
     """
     num = progressNum(index, total, minNum, maxNum)
-    if progressCb:
-        progressCb(msg, num)
-    else:
-        logger.progress(msg, num)
+    if not progressCb:
+        logger = assetQC.api.logger.getLogger()
+        progressCb = logger.progress
+    progressCb(msg, num)
 
 
 def formatInstances(context, validFilter):
     """
+    Returns information about all instances and their validity. 
     
     :param context: 
     :param validFilter: 
@@ -98,6 +96,10 @@ def formatInstances(context, validFilter):
 
 
 def isMayaRunning():
+    """
+    Determines if we are running inside Autodesk Maya.
+    :return: True or False. 
+    """
     result = False
 
     try:
@@ -119,14 +121,15 @@ def isMayaRunning():
 
 
 def isStandaloneRunning():
+    """
+    Determines if we are running inside the standalone Python interpreter.
+    :return: True or False. 
+    """
     result = False
     if sys.executable:
         dir, name = os.path.split(sys.executable)
         if 'python' in name:
             result = True
-    # if not isMayaRunning():
-    #     result = True
-    # assert False
     return result
 
 

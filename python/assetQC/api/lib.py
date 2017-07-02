@@ -35,13 +35,14 @@ FINISH_PERCENT = 100
 
 def _runCollection(ctx,
                    assetType=None,
-                   progressCb=assetQC.api.logger.progress,
+                   progressCb=None,
                    logger=None):
     msgBase = 'Collector'
 
     if logger is None:
-        name = assetQC.api.logger.BASE_LOG_NAME
-        logger = assetQC.api.logger.getLogger(name)
+        logger = assetQC.api.logger.getLogger()
+    if progressCb is None:
+        progressCb = logger.progress
 
     manager = ctx.getPluginManager()
     hostApp = ctx.getHostApp()
@@ -86,13 +87,14 @@ def _runCollection(ctx,
 
 def _runValidation(ctx,
                    assetType=None,
-                   progressCb=assetQC.api.logger.progress,
+                   progressCb=None,
                    logger=None):
     msgBase = 'Validate'
 
     if logger is None:
-        name = assetQC.api.logger.BASE_LOG_NAME
-        logger = assetQC.api.logger.getLogger(name)
+        logger = assetQC.api.logger.getLogger()
+    if progressCb is None:
+        progressCb = logger.progress
 
     instances = ctx.getInstances(sortByName=True)
     numInstances = len(instances)
@@ -175,13 +177,14 @@ def _runValidation(ctx,
 
 
 def _runFixers(ctx,
-               progressCb=assetQC.api.logger.progress,
+               progressCb=None,
                logger=None):
     msgBase = 'Fixing'
 
     if logger is None:
-        name = assetQC.api.logger.BASE_LOG_NAME
-        logger = assetQC.api.logger.getLogger(name)
+        logger = assetQC.api.logger.getLogger()
+    if progressCb is None:
+        progressCb = logger.progress
 
     instances = ctx.getInstances(sortByName=True)
     numInstances = len(instances)
@@ -271,13 +274,14 @@ def _runFixers(ctx,
 
 def _runReporters(ctx,
                   assetType=None,
-                  progressCb=assetQC.api.logger.progress,
+                  progressCb=None,
                   logger=None):
     msgBase = 'Processing Output'
 
     if logger is None:
-        name = assetQC.api.logger.BASE_LOG_NAME
-        logger = assetQC.api.logger.getLogger(name)
+        logger = assetQC.api.logger.getLogger()
+    if progressCb is None:
+        progressCb = logger.progress
 
     manager = ctx.getPluginManager()
     hostApp = ctx.getHostApp()
@@ -327,7 +331,7 @@ def run(ctx=None,
         doFixers=True,
         doReporters=True,
         logger=None,
-        progressCb=assetQC.api.logger.progress):
+        progressCb=None):
     """
     Runs asset quality checking.
 
@@ -359,6 +363,11 @@ def run(ctx=None,
         ctx = context.Context()
     assert isinstance(ctx, context.Context)
 
+    if logger is None:
+        logger = assetQC.api.logger.getLogger()
+    if progressCb is None:
+        progressCb = logger.progress
+
     # collectors step.
     if doCollectors:
         msg = 'Running Collectors...'
@@ -372,8 +381,7 @@ def run(ctx=None,
         if not ctx.getInstances(sortByName=True):
             msg = 'Cannot find any instances: {instances!r}'
             msg = msg.format(instances=ctx.getInstances(sortByName=True))
-            assetQC.api.logger.warning(msg,
-                                       logger=logger)
+            logger.warning(msg)
 
             msg = 'Finished Asset QC'
             assetQC.api.utils.printProgressNum(msg, FINISH_PERCENT,
