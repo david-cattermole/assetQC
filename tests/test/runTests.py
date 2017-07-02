@@ -2,7 +2,7 @@
 Sets up and runs tests for the 'assetQC' API.
 
 To be run with:
-$ env ASSETQC_CONFIG_PATH='/home/davidc/dev/mayaScripts/trunk/assetQC/test/config/config.json' python runTests.py
+$ env ASSETQC_CONFIG_PATH='/home/davidc/dev/mayaScripts/trunk/assetQC/test/config/config_linux.json' python runTests.py
 """
 
 import os
