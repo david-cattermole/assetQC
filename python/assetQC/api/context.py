@@ -44,12 +44,7 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
         # user data
         self.__environ = dict(os.environ)
         self.__operatingSystem = os.name
-        self.__userName = None
-        if os.name == 'nt':
-            self.__userName = getpass.getuser()
-        else:
-            import pwd
-            self.__userName = pwd.getpwuid(os.geteuid()).pw_name
+        self.__userName = getpass.getuser()
         self.__hostName = socket.gethostname()
         self.__hostApplication = assetQC.api.utils.HOST_APP_ALL
         if hostApp is None:
