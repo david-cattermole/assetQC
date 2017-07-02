@@ -83,7 +83,11 @@ def __readConfig():
         data = __readData(configPath)
         # print 'assetQC: Configuration Read Successfully:', configPath
     else:
-        raise ValueError('assetQC: Configuration file cannot be found.')
+        msg = ('assetQC: Configuration file cannot be found. '
+               'Please set the environment variable "ASSETQC_CONFIG_PATH". '
+               'Current value is: {path}')
+        msg = msg.format(path=configPath)
+        raise ValueError(msg)
     return data
 
 
