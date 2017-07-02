@@ -69,8 +69,8 @@ class Collector(baseDataObject.BaseDataObject,
 
         e = time.clock()  # end
         d = e - s
-        # name = self.getClassName()
-        self.logger.debug('Duration: {0}'.format(d))
+        msg = 'Duration: %s' % d
+        self.logger.debug(msg)
         return
 
     def preRun(self, ctx):

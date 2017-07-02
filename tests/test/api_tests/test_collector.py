@@ -24,10 +24,10 @@ class TestCollector(test.baseLib.BaseCase):
 
     def test_log(self):
         x = ExampleCollector()
-        x.logInfo('Info Message')
-        x.logWarning('Warning Message')
-        x.logError('Error Message')
-        x.logDebug('Debug Message')
-        x.logFailure('Failure Message')
-        x.logProgress('Progress Message', 50)
+        x.logger.info('Info Message')
+        x.logger.warning('Warning Message')
+        x.logger.error('Error Message')
+        x.logger.debug('Debug Message')
+        x.logger.failure('Failure Message')
+        x.logger.progress('Progress Message', 50)
         return

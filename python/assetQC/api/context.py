@@ -21,6 +21,7 @@ import assetQC.api.register
 import assetQC.api.utils
 import assetQC.api.assetInstance
 import assetQC.api.baseDataObject
+import assetQC.api.logger
 
 
 class Context(assetQC.api.baseDataObject.BaseDataObject):
@@ -66,6 +67,11 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
 
         # assets
         self.__instances = {}
+
+        # logging
+        name = self.getClassName()
+        name = assetQC.api.logger.BASE_LOG_NAME + '.' + name
+        self.__logger = assetQC.api.logger.getLogger(name)
 
     @property
     def logger(self):
