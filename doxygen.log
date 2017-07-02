@@ -205,6 +205,7 @@ Generating caller graph for function assetQC::api::config::memoized::__call__
 Generating call graph for function assetQC::api::config::memoized::__get__
 Generating docs for namespace assetQC::api::context
 Generating docs for compound assetQC::api::context::Context...
+Generating call graph for function assetQC::api::context::Context::__init__
 Generating call graph for function assetQC::api::context::Context::addInstance
 Generating caller graph for function assetQC::api::context::Context::addInstance
 Generating call graph for function assetQC::api::context::Context::addInstances
@@ -268,67 +269,68 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/61
-Running dot for graph 2/61
-Running dot for graph 3/61
-Running dot for graph 4/61
-Running dot for graph 5/61
-Running dot for graph 6/61
-Running dot for graph 7/61
-Running dot for graph 8/61
-Running dot for graph 9/61
-Running dot for graph 10/61
-Running dot for graph 11/61
-Running dot for graph 12/61
-Running dot for graph 13/61
-Running dot for graph 14/61
-Running dot for graph 15/61
-Running dot for graph 16/61
-Running dot for graph 17/61
-Running dot for graph 18/61
-Running dot for graph 19/61
-Running dot for graph 20/61
-Running dot for graph 21/61
-Running dot for graph 22/61
-Running dot for graph 23/61
-Running dot for graph 24/61
-Running dot for graph 25/61
-Running dot for graph 26/61
-Running dot for graph 27/61
-Running dot for graph 28/61
-Running dot for graph 29/61
-Running dot for graph 30/61
-Running dot for graph 31/61
-Running dot for graph 32/61
-Running dot for graph 33/61
-Running dot for graph 34/61
-Running dot for graph 35/61
-Running dot for graph 36/61
-Running dot for graph 37/61
-Running dot for graph 38/61
-Running dot for graph 39/61
-Running dot for graph 40/61
-Running dot for graph 41/61
-Running dot for graph 42/61
-Running dot for graph 43/61
-Running dot for graph 44/61
-Running dot for graph 45/61
-Running dot for graph 46/61
-Running dot for graph 47/61
-Running dot for graph 48/61
-Running dot for graph 49/61
-Running dot for graph 50/61
-Running dot for graph 51/61
-Running dot for graph 52/61
-Running dot for graph 53/61
-Running dot for graph 54/61
-Running dot for graph 55/61
-Running dot for graph 56/61
-Running dot for graph 57/61
-Running dot for graph 58/61
-Running dot for graph 59/61
-Running dot for graph 60/61
-Running dot for graph 61/61
+Running dot for graph 1/62
+Running dot for graph 2/62
+Running dot for graph 3/62
+Running dot for graph 4/62
+Running dot for graph 5/62
+Running dot for graph 6/62
+Running dot for graph 7/62
+Running dot for graph 8/62
+Running dot for graph 9/62
+Running dot for graph 10/62
+Running dot for graph 11/62
+Running dot for graph 12/62
+Running dot for graph 13/62
+Running dot for graph 14/62
+Running dot for graph 15/62
+Running dot for graph 16/62
+Running dot for graph 17/62
+Running dot for graph 18/62
+Running dot for graph 19/62
+Running dot for graph 20/62
+Running dot for graph 21/62
+Running dot for graph 22/62
+Running dot for graph 23/62
+Running dot for graph 24/62
+Running dot for graph 25/62
+Running dot for graph 26/62
+Running dot for graph 27/62
+Running dot for graph 28/62
+Running dot for graph 29/62
+Running dot for graph 30/62
+Running dot for graph 31/62
+Running dot for graph 32/62
+Running dot for graph 33/62
+Running dot for graph 34/62
+Running dot for graph 35/62
+Running dot for graph 36/62
+Running dot for graph 37/62
+Running dot for graph 38/62
+Running dot for graph 39/62
+Running dot for graph 40/62
+Running dot for graph 41/62
+Running dot for graph 42/62
+Running dot for graph 43/62
+Running dot for graph 44/62
+Running dot for graph 45/62
+Running dot for graph 46/62
+Running dot for graph 47/62
+Running dot for graph 48/62
+Running dot for graph 49/62
+Running dot for graph 50/62
+Running dot for graph 51/62
+Running dot for graph 52/62
+Running dot for graph 53/62
+Running dot for graph 54/62
+Running dot for graph 55/62
+Running dot for graph 56/62
+Running dot for graph 57/62
+Running dot for graph 58/62
+Running dot for graph 59/62
+Running dot for graph 60/62
+Running dot for graph 61/62
+Running dot for graph 62/62
 Patching output file 1/17
 Patching output file 2/17
 Patching output file 3/17
@@ -346,6 +348,6 @@ Patching output file 14/17
 Patching output file 15/17
 Patching output file 16/17
 Patching output file 17/17
-symbol cache used 194/65536 hits=10236 misses=194
+symbol cache used 195/65536 hits=10336 misses=195
 lookup cache used 261/65536 hits=577 misses=278
 finished...
