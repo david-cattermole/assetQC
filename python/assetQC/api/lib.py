@@ -70,17 +70,17 @@ def _runCollection(ctx,
             if collector.condition(ctx):
                 collector._doProcess(ctx)
         except WarningStatus, msg:
-            collector.logWarning(msg)
+            collector.logger.warning(msg)
         except FailureStatus:
             trace = traceback.format_exc()
-            collector.logFailure(trace)
+            collector.logger.failure(trace)
         except AssertionError:
             trace = traceback.format_exc()
-            collector.logError(trace)
+            collector.logger.error(trace)
             raise
         except BaseException:
             trace = traceback.format_exc()
-            collector.logError(trace)
+            collector.logger.error(trace)
             raise
     return ctx
 
@@ -138,14 +138,14 @@ def _runValidation(ctx,
                 pass
             except FailureStatus, msg:
                 trace = traceback.format_exc()
-                instance.logFailure(trace)
+                instance.logger.failure(trace)
                 statusObj = StatusObject(FailureStatus,
                                          msg, trace,
                                          validatorObj, validator.fixers)
                 instance.addStatus(statusObj)
             except ErrorStatus, msg:
                 trace = traceback.format_exc()
-                instance.logError(trace)
+                instance.logger.error(trace)
                 statusObj = StatusObject(ErrorStatus,
                                          msg, trace,
                                          validatorObj, validator.fixers)
@@ -153,7 +153,7 @@ def _runValidation(ctx,
                 raise
             except AssertionError, msg:
                 trace = traceback.format_exc()
-                instance.logError(trace)
+                instance.logger.error(trace)
                 statusObj = StatusObject(ErrorStatus,
                                          msg, trace,
                                          validatorObj, validator.fixers)
@@ -161,7 +161,7 @@ def _runValidation(ctx,
                 raise
             except BaseException, msg:
                 trace = traceback.format_exc()
-                instance.logError(trace)
+                instance.logger.error(trace)
                 statusObj = StatusObject(ErrorStatus, msg, trace,
                                          validatorObj, validator.fixers)
                 instance.addStatus(statusObj)
@@ -222,14 +222,14 @@ def _runFixers(ctx,
                     pass
                 except FailureStatus, msg:
                     trace = traceback.format_exc()
-                    instance.logFailure(trace)
+                    instance.logger.failure(trace)
                     statusObj = StatusObject(FailureStatus,
                                              msg, trace,
                                              fixerObj, fixerObjs)
                     instance.addStatus(statusObj)
                 except AssertionError:
                     trace = traceback.format_exc()
-                    instance.logError(trace)
+                    instance.logger.error(trace)
                     statusObj = StatusObject(ErrorStatus,
                                              msg, trace,
                                              fixerObj, fixerObjs)
@@ -237,7 +237,7 @@ def _runFixers(ctx,
                     raise
                 except BaseException:
                     trace = traceback.format_exc()
-                    instance.logError(trace)
+                    instance.logger.error(trace)
                     statusObj = StatusObject(ErrorStatus,
                                              msg, trace,
                                              fixerObj, fixerObjs)
@@ -253,7 +253,7 @@ def _runFixers(ctx,
                     pass
                 except FailureStatus, msg:
                     trace = traceback.format_exc()
-                    instance.logFailure(trace)
+                    instance.logger.failure(trace)
                     statusObj = StatusObject(FailureStatus,
                                              msg, trace,
                                              fixerObj, fixerObjs)
@@ -261,11 +261,11 @@ def _runFixers(ctx,
                     instance.setValid(False)
                 except AssertionError:
                     trace = traceback.format_exc()
-                    instance.logError(msg)
+                    instance.logger.error(msg)
                     raise
                 except BaseException:
                     trace = traceback.format_exc()
-                    instance.logError(msg)
+                    instance.logger.error(msg)
                     raise
                 else:
                     instance.removeStatus(statusValue)
@@ -309,17 +309,17 @@ def _runReporters(ctx,
             if reporter.condition(ctx):
                 reporter._doProcess(ctx)
         except WarningStatus, msg:
-            reporter.logWarning(msg)
+            reporter.logger.warning(msg)
         except FailureStatus:
             trace = traceback.format_exc()
-            reporter.logFailure(trace)
+            reporter.logger.failure(trace)
         except AssertionError:
             trace = traceback.format_exc()
-            reporter.logError(trace)
+            reporter.logger.error(trace)
             raise
         except BaseException:
             trace = traceback.format_exc()
-            reporter.logError(trace)
+            reporter.logger.error(trace)
             raise
     return ctx
 

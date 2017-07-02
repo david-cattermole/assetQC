@@ -98,6 +98,7 @@ def formatInstances(context, validFilter):
 def isMayaRunning():
     """
     Determines if we are running inside Autodesk Maya.
+
     :return: True or False. 
     """
     result = False
@@ -123,6 +124,7 @@ def isMayaRunning():
 def isStandaloneRunning():
     """
     Determines if we are running inside the standalone Python interpreter.
+
     :return: True or False. 
     """
     result = False

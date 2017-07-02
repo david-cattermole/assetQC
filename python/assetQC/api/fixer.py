@@ -39,6 +39,10 @@ class Fixer(baseDataObject.BaseDataObject,
         name = logger.BASE_LOG_NAME + '.' + name
         self.__logger = logger.getLogger(name)
 
+    @property
+    def logger(self):
+        return self.__logger
+
     def getInstance(self):
         """
         Return the AssetInstance object this Fixer will operate on. 
@@ -73,7 +77,7 @@ class Fixer(baseDataObject.BaseDataObject,
 
         e = time.clock()  # end
         d = e - s
-        self.logDebug('Duration: {0}'.format(d))
+        self.logger.debug('Duration: {0}'.format(d))
         return
 
     def preRun(self, ctx):
@@ -113,65 +117,3 @@ class Fixer(baseDataObject.BaseDataObject,
         """
         return
 
-    def logInfo(self, msg):
-        """
-        Log an information message against this Fixer object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.info(msg)
-
-    def logProgress(self, msg, num):
-        """
-        Log a progress message against this Fixer object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :param num: Percentage of the progress, between 0 and 100 inclusive.
-        :type num: int
-        :return: None
-        """
-        msg = '{0}% {1}'.format(num, msg)
-        return self.__logger.log(logger.LEVEL_PROGRESS, msg)
-
-    def logWarning(self, msg):
-        """
-        Log a warning message against this Fixer object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.warning(msg)
-
-    def logFailure(self, msg):
-        """
-        Log a failure message against this Fixer object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.log(logger.LEVEL_FAILURE, msg)
-
-    def logError(self, msg):
-        """
-        Log an error message against this Fixer object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.error(msg)
-
-    def logDebug(self, msg):
-        """
-        Log a debug message against this Fixer object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.debug(msg)

@@ -67,6 +67,10 @@ class Context(assetQC.api.baseDataObject.BaseDataObject):
         # assets
         self.__instances = {}
 
+    @property
+    def logger(self):
+        return self.__logger
+
     def getEnvVar(self, name, default=None):
         return self.__environ.get(name, default)
 

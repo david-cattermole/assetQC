@@ -3,6 +3,7 @@ Responsible for outputting results of the validator process.
 """
 
 import abc
+import time
 import assetQC.api.baseDataObject
 import assetQC.api.context
 import assetQC.api.logger
@@ -32,14 +33,13 @@ class Reporter(assetQC.api.baseDataObject.BaseDataObject):
 
     def __init__(self):
         super(Reporter, self).__init__()
-
-        # name = self.getClassName()
-        # _id = self.getObjectHash()
-        # self.__logger = assetQC.api.logger.Logger(logName=name, logId=_id)
-
         name = self.getClassName()
         name = assetQC.api.logger.BASE_LOG_NAME + '.' + name
         self.__logger = assetQC.api.logger.getLogger(name)
+
+    @property
+    def logger(self):
+        return self.__logger
 
     @abc.abstractmethod
     def condition(self, ctx):
@@ -61,9 +61,15 @@ class Reporter(assetQC.api.baseDataObject.BaseDataObject):
         :return: None
         """
         assert isinstance(ctx, assetQC.api.context.Context)
+        s = time.clock()  # start
+
         self.preRun(ctx)
         self.run(ctx)
         self.postRun(ctx)
+
+        e = time.clock()  # end
+        d = e - s
+        self.logger.debug('Duration: {0}'.format(d))
         return
 
     def preRun(self, ctx):
@@ -102,66 +108,3 @@ class Reporter(assetQC.api.baseDataObject.BaseDataObject):
         :return: None
         """
         return
-
-    def logInfo(self, msg):
-        """
-        Log an information message against this Reporter object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.info(msg)
-
-    def logProgress(self, msg, num):
-        """
-        Log a progress message against this Reporter object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :param num: Percentage of the progress, between 0 and 100 inclusive.
-        :type num: int
-        :return: None
-        """
-        msg = '{0}% {1}'.format(num, msg)
-        return self.__logger.log(logger.LEVEL_PROGRESS, msg)
-
-    def logWarning(self, msg):
-        """
-        Log a warning message against this Reporter object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.warning(msg)
-
-    def logFailure(self, msg):
-        """
-        Log a failure message against this Reporter object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.log(logger.LEVEL_FAILURE, msg)
-
-    def logError(self, msg):
-        """
-        Log an error message against this Reporter object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.error(msg)
-
-    def logDebug(self, msg):
-        """
-        Log a debug message against this Reporter object.
-
-        :param msg: Message to log.
-        :type msg: str
-        :return: None
-        """
-        return self.__logger.debug(msg)
