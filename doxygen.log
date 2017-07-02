@@ -182,7 +182,6 @@ Generating docs for namespace assetQC::api::assetInstance
 Generating docs for compound assetQC::api::assetInstance::AssetInstance...
 Generating caller graph for function assetQC::api::assetInstance::AssetInstance::addFixer
 Generating call graph for function assetQC::api::assetInstance::AssetInstance::addFixers
-Generating caller graph for function assetQC::api::assetInstance::AssetInstance::logDebug
 Generating docs for namespace assetQC::api::baseDataObject
 Generating docs for compound assetQC::api::baseDataObject::BaseDataObject...
 Generating caller graph for function assetQC::api::baseDataObject::BaseDataObject::getClassName
@@ -197,7 +196,6 @@ Generating docs for namespace assetQC::api::collector
 Generating docs for compound assetQC::api::collector::Collector...
 Generating call graph for function assetQC::api::collector::Collector::__init__
 Generating call graph for function assetQC::api::collector::Collector::condition
-Generating caller graph for function assetQC::api::collector::Collector::logDebug
 Generating caller graph for function assetQC::api::collector::Collector::postRun
 Generating caller graph for function assetQC::api::collector::Collector::preRun
 Generating caller graph for function assetQC::api::collector::Collector::run
@@ -218,7 +216,6 @@ Generating docs for namespace assetQC::api::fixer
 Generating docs for compound assetQC::api::fixer::Fixer...
 Generating call graph for function assetQC::api::fixer::Fixer::__init__
 Generating call graph for function assetQC::api::fixer::Fixer::condition
-Generating caller graph for function assetQC::api::fixer::Fixer::logDebug
 Generating caller graph for function assetQC::api::fixer::Fixer::postRun
 Generating caller graph for function assetQC::api::fixer::Fixer::preRun
 Generating caller graph for function assetQC::api::fixer::Fixer::run
@@ -234,7 +231,6 @@ Generating docs for namespace assetQC::api::reporter
 Generating docs for compound assetQC::api::reporter::Reporter...
 Generating call graph for function assetQC::api::reporter::Reporter::__init__
 Generating call graph for function assetQC::api::reporter::Reporter::condition
-Generating caller graph for function assetQC::api::reporter::Reporter::logDebug
 Generating caller graph for function assetQC::api::reporter::Reporter::postRun
 Generating caller graph for function assetQC::api::reporter::Reporter::preRun
 Generating caller graph for function assetQC::api::reporter::Reporter::run
@@ -251,7 +247,6 @@ Generating docs for namespace assetQC::api::validator
 Generating docs for compound assetQC::api::validator::Validator...
 Generating call graph for function assetQC::api::validator::Validator::__init__
 Generating call graph for function assetQC::api::validator::Validator::condition
-Generating caller graph for function assetQC::api::validator::Validator::logDebug
 Generating caller graph for function assetQC::api::validator::Validator::postRun
 Generating caller graph for function assetQC::api::validator::Validator::preRun
 Generating caller graph for function assetQC::api::validator::Validator::run
@@ -273,72 +268,67 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/66
-Running dot for graph 2/66
-Running dot for graph 3/66
-Running dot for graph 4/66
-Running dot for graph 5/66
-Running dot for graph 6/66
-Running dot for graph 7/66
-Running dot for graph 8/66
-Running dot for graph 9/66
-Running dot for graph 10/66
-Running dot for graph 11/66
-Running dot for graph 12/66
-Running dot for graph 13/66
-Running dot for graph 14/66
-Running dot for graph 15/66
-Running dot for graph 16/66
-Running dot for graph 17/66
-Running dot for graph 18/66
-Running dot for graph 19/66
-Running dot for graph 20/66
-Running dot for graph 21/66
-Running dot for graph 22/66
-Running dot for graph 23/66
-Running dot for graph 24/66
-Running dot for graph 25/66
-Running dot for graph 26/66
-Running dot for graph 27/66
-Running dot for graph 28/66
-Running dot for graph 29/66
-Running dot for graph 30/66
-Running dot for graph 31/66
-Running dot for graph 32/66
-Running dot for graph 33/66
-Running dot for graph 34/66
-Running dot for graph 35/66
-Running dot for graph 36/66
-Running dot for graph 37/66
-Running dot for graph 38/66
-Running dot for graph 39/66
-Running dot for graph 40/66
-Running dot for graph 41/66
-Running dot for graph 42/66
-Running dot for graph 43/66
-Running dot for graph 44/66
-Running dot for graph 45/66
-Running dot for graph 46/66
-Running dot for graph 47/66
-Running dot for graph 48/66
-Running dot for graph 49/66
-Running dot for graph 50/66
-Running dot for graph 51/66
-Running dot for graph 52/66
-Running dot for graph 53/66
-Running dot for graph 54/66
-Running dot for graph 55/66
-Running dot for graph 56/66
-Running dot for graph 57/66
-Running dot for graph 58/66
-Running dot for graph 59/66
-Running dot for graph 60/66
-Running dot for graph 61/66
-Running dot for graph 62/66
-Running dot for graph 63/66
-Running dot for graph 64/66
-Running dot for graph 65/66
-Running dot for graph 66/66
+Running dot for graph 1/61
+Running dot for graph 2/61
+Running dot for graph 3/61
+Running dot for graph 4/61
+Running dot for graph 5/61
+Running dot for graph 6/61
+Running dot for graph 7/61
+Running dot for graph 8/61
+Running dot for graph 9/61
+Running dot for graph 10/61
+Running dot for graph 11/61
+Running dot for graph 12/61
+Running dot for graph 13/61
+Running dot for graph 14/61
+Running dot for graph 15/61
+Running dot for graph 16/61
+Running dot for graph 17/61
+Running dot for graph 18/61
+Running dot for graph 19/61
+Running dot for graph 20/61
+Running dot for graph 21/61
+Running dot for graph 22/61
+Running dot for graph 23/61
+Running dot for graph 24/61
+Running dot for graph 25/61
+Running dot for graph 26/61
+Running dot for graph 27/61
+Running dot for graph 28/61
+Running dot for graph 29/61
+Running dot for graph 30/61
+Running dot for graph 31/61
+Running dot for graph 32/61
+Running dot for graph 33/61
+Running dot for graph 34/61
+Running dot for graph 35/61
+Running dot for graph 36/61
+Running dot for graph 37/61
+Running dot for graph 38/61
+Running dot for graph 39/61
+Running dot for graph 40/61
+Running dot for graph 41/61
+Running dot for graph 42/61
+Running dot for graph 43/61
+Running dot for graph 44/61
+Running dot for graph 45/61
+Running dot for graph 46/61
+Running dot for graph 47/61
+Running dot for graph 48/61
+Running dot for graph 49/61
+Running dot for graph 50/61
+Running dot for graph 51/61
+Running dot for graph 52/61
+Running dot for graph 53/61
+Running dot for graph 54/61
+Running dot for graph 55/61
+Running dot for graph 56/61
+Running dot for graph 57/61
+Running dot for graph 58/61
+Running dot for graph 59/61
+Running dot for graph 60/61
+Running dot for graph 61/61
 Patching output file 1/17
 Patching output file 2/17
 Patching output file 3/17
@@ -356,6 +346,6 @@ Patching output file 14/17
 Patching output file 15/17
 Patching output file 16/17
 Patching output file 17/17
-symbol cache used 218/65536 hits=11618 misses=218
-lookup cache used 285/65536 hits=649 misses=302
+symbol cache used 194/65536 hits=10236 misses=194
+lookup cache used 261/65536 hits=577 misses=278
 finished...

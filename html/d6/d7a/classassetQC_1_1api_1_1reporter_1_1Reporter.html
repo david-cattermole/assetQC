@@ -120,12 +120,7 @@ Inheritance diagram for assetQC.api.reporter.Reporter:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#adb6ab4bc6fe9c38f821229aaa918da39">__init__</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a2cfc6598bb065c6c00d87797c45b741e">condition</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#ac5e72bd94862c8ff838099dcfb43512d">logDebug</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#ac5b32f5160245dce933f72f2fa69ae22">logError</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a5060e8eeee1a5dd3d8876e4afdf82863">logFailure</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a8bfb63d17dbebd0d92f10bd13d53cc7e">logInfo</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#af431f6a408338102b1fbd9d8e518beab">logProgress</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a1f07b96adb52c9ef16b8949e3589ec16">logWarning</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a5eb1f56f0901cde795978b0c2cdcd843">logger</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a10e1d98abaadf082a489f0b7b0bdd483">postRun</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#aa900b8d5de0c4b9b9bcc89a5ba6ec8ed">preRun</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a0289eb96ca2f3d0246a37e92d6c7912e">run</a></td></tr>
@@ -212,219 +207,21 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="ac5e72bd94862c8ff838099dcfb43512d"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logDebug" ref="ac5e72bd94862c8ff838099dcfb43512d" args="" -->
+<a class="anchor" id="a5eb1f56f0901cde795978b0c2cdcd843"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logger" ref="a5eb1f56f0901cde795978b0c2cdcd843" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#ac5e72bd94862c8ff838099dcfb43512d">assetQC.api.reporter.Reporter.logDebug</a> </td>
+          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a5eb1f56f0901cde795978b0c2cdcd843">assetQC.api.reporter.Reporter.logger</a> </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<div class="fragment"><pre class="fragment">
-Log a debug message against this Reporter object.
 
-:param msg: Message to log.
-:type msg: str
-:return: None
-</pre></div> 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph.png" border="0" usemap="#d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph" alt=""/></div>
-<map name="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph" id="d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter_ac5e72bd94862c8ff838099dcfb43512d_icgraph">
-<area shape="rect" id="node3" href="../../d6/d00/classassetQC_1_1api_1_1validator_1_1Validator.html#a015e68050f01248dda0f7e6c14c3f5df" title="assetQC.api.validator.Validator.condition" alt="" coords="332,5,609,35"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ac5b32f5160245dce933f72f2fa69ae22"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logError" ref="ac5b32f5160245dce933f72f2fa69ae22" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#ac5b32f5160245dce933f72f2fa69ae22">assetQC.api.reporter.Reporter.logError</a> </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<div class="fragment"><pre class="fragment">
-Log an error message against this Reporter object.
-
-:param msg: Message to log.
-:type msg: str
-:return: None
-</pre></div> 
-</div>
-</div>
-<a class="anchor" id="a5060e8eeee1a5dd3d8876e4afdf82863"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logFailure" ref="a5060e8eeee1a5dd3d8876e4afdf82863" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a5060e8eeee1a5dd3d8876e4afdf82863">assetQC.api.reporter.Reporter.logFailure</a> </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<div class="fragment"><pre class="fragment">
-Log a failure message against this Reporter object.
-
-:param msg: Message to log.
-:type msg: str
-:return: None
-</pre></div> 
-</div>
-</div>
-<a class="anchor" id="a8bfb63d17dbebd0d92f10bd13d53cc7e"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logInfo" ref="a8bfb63d17dbebd0d92f10bd13d53cc7e" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a8bfb63d17dbebd0d92f10bd13d53cc7e">assetQC.api.reporter.Reporter.logInfo</a> </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<div class="fragment"><pre class="fragment">
-Log an information message against this Reporter object.
-
-:param msg: Message to log.
-:type msg: str
-:return: None
-</pre></div> 
-</div>
-</div>
-<a class="anchor" id="af431f6a408338102b1fbd9d8e518beab"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logProgress" ref="af431f6a408338102b1fbd9d8e518beab" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#af431f6a408338102b1fbd9d8e518beab">assetQC.api.reporter.Reporter.logProgress</a> </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>num</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<div class="fragment"><pre class="fragment">
-Log a progress message against this Reporter object.
-
-:param msg: Message to log.
-:type msg: str
-:param num: Percentage of the progress, between 0 and 100 inclusive.
-:type num: int
-:return: None
-</pre></div> 
-</div>
-</div>
-<a class="anchor" id="a1f07b96adb52c9ef16b8949e3589ec16"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::logWarning" ref="a1f07b96adb52c9ef16b8949e3589ec16" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def <a class="el" href="../../d6/d7a/classassetQC_1_1api_1_1reporter_1_1Reporter.html#a1f07b96adb52c9ef16b8949e3589ec16">assetQC.api.reporter.Reporter.logWarning</a> </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<div class="fragment"><pre class="fragment">
-Log a warning message against this Reporter object.
-
-:param msg: Message to log.
-:type msg: str
-:return: None
-</pre></div> 
 </div>
 </div>
 <a class="anchor" id="a10e1d98abaadf082a489f0b7b0bdd483"></a><!-- doxytag: member="assetQC::api::reporter::Reporter::postRun" ref="a10e1d98abaadf082a489f0b7b0bdd483" args="" -->
