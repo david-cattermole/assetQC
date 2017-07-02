@@ -186,7 +186,6 @@ def getPluginSearchPath():
         for v in value:
             v = v.replace('/', os.sep)
             if v.endswith(':'):
-                i = len(v) - 1
                 v = v[0:-1] + str(os.pathsep)
             result += v
     elif isinstance(value, (str, unicode)):
