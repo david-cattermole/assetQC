@@ -7,7 +7,7 @@ import maya.cmds
 import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
-import test.mayaAssets.camera.cameraInstance as cameraInstance
+import test.mayaAssets.camera.cameraInstance
 
 INVALID_NODES = [
     '|persp',
@@ -28,10 +28,12 @@ class CameraCollector(collector.Collector):
     hostApps = ['maya']
 
     def condition(self, ctx):
-        return True
+        return super(self.__class__, self).condition(ctx)
 
     def run(self, ctx):
         assert isinstance(ctx, context.Context)
+        super(self.__class__, self).run(ctx)
+
         nodes = maya.cmds.ls(cameras=True, long=True)
         for node in nodes:
             if node in INVALID_NODES:
@@ -40,7 +42,7 @@ class CameraCollector(collector.Collector):
                                                     fullPath=True)[0])
             name = transform.split('|')[-1]
             if not ctx.hasInstance(name):
-                instance = cameraInstance.CameraInstance(name)
+                instance = test.mayaAssets.camera.cameraInstance.CameraInstance(name)
                 instance.setNode(str(node))
                 instance.setTransformNode(transform)
                 instance.setShapeNode(str(node))
