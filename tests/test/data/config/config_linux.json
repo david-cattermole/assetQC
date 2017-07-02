@@ -1,0 +1,25 @@
+{
+  "ASSETQC_BASE_DIR": "/home/davidc/dev/mayaScripts/trunk/assetQC",
+  "ASSETQC_PLUGIN_SEARCH_PATH": [
+    "${ASSETQC_BASE_DIR}/tests/test/:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/camera:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/rig:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/texture:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/shader:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/geometry:",
+    "${ASSETQC_BASE_DIR}/tests/test/mayaAssets/anim:",
+    "${ASSETQC_BASE_DIR}/tests/test/standardAssets/camera:",
+    "${ASSETQC_BASE_DIR}/tests/test/standardAssets/rig:",
+    "${ASSETQC_BASE_DIR}/tests/test/standardAssets/texture:",
+    "${ASSETQC_BASE_DIR}/tests/test/standardAssets/shader:",
+    "${ASSETQC_BASE_DIR}/tests/test/standardAssets/geometry:",
+    "${ASSETQC_BASE_DIR}/tests/test/standardAssets/anim:",
+    "${ASSETQC_BASE_DIR}/tests/test/reporters:"
+  ],
+  "ASSETQC_TEMP_DIR": "/tmp/assetQC",
+  "ASSETQC_LOGGER_CONFIG_PATH": "${ASSETQC_BASE_DIR}/config/logging.ini",
+  "ASSETQC_LOGGER_DIR": "${ASSETQC_BASE_DIR}/tests/test/log/",
+  "ASSETQC_TEST_BASE_DIR": "${ASSETQC_BASE_DIR}/tests/test",
+  "ASSETQC_TEST_TEMP_DIR": "${ASSETQC_TEST_BASE_DIR}/tmp/",
+  "ASSETQC_TEST_DATA_DIR": "${ASSETQC_TEST_BASE_DIR}/data/"
+}
