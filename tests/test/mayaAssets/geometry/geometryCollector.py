@@ -7,7 +7,7 @@ import maya.cmds
 import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
-import test.mayaAssets.geometry.geometryInstance as geometryInstance
+import test.mayaAssets.geometry.geometryInstance
 
 GEOM_PREFIX = 'GEOM_'
 
@@ -47,7 +47,7 @@ class GeometryCollector(collector.Collector):
 
             geomList = maya.cmds.sets(node, query=True) or []
             name = str(node)[len(GEOM_PREFIX):]
-            instance = geometryInstance.GeometryInstance(name)
+            instance = test.mayaAssets.geometry.geometryInstance.GeometryInstance(name)
             instance.setNode(str(node))
             instance.setGeometryList(geomList)
             ctx.addInstance(instance)

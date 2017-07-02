@@ -8,7 +8,7 @@ import test.mayaAssets.mayaInstance as mayaInstance
 
 class GeometryInstance(mayaInstance.MayaInstance):
     def __init__(self, name):
-        super(GeometryInstance, self).__init__(name, assetType='geometry')
+        super(self.__class__, self).__init__(name, assetType='geometry')
 
     def getGeometryList(self):
         return self.data['geom_list']

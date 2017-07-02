@@ -7,12 +7,13 @@ import maya.cmds
 import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
-import test.mayaAssets.rig.rigInstance as rigInstance
+import test.mayaAssets.rig.rigInstance
 
 
 RIG_PREFIX = 'RIG_'
 CTRL_PREFIX = 'CTRL_'
 GEOM_PREFIX = 'GEOM_'
+
 
 def getSet(node, prefix):
     sets = maya.cmds.sets(node, query=True)
@@ -50,7 +51,7 @@ class RigCollector(collector.Collector):
                 continue
 
             name = str('_'.join(nodeSplit[1:]))
-            instance = rigInstance.RigInstance(name)
+            instance = test.mayaAssets.rig.rigInstance.RigInstance(name)
             ctx.addInstance(instance)
             instance.setNode(str(node))
             instance.setRigSetNode(str(node))

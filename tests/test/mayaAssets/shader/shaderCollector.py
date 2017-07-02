@@ -7,7 +7,7 @@ import maya.cmds
 import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
-import test.mayaAssets.shader.shaderInstance as shaderInstance
+import test.mayaAssets.shader.shaderInstance
 
 INVALID_NODES = [
     'lambert1',
@@ -45,7 +45,7 @@ class ShaderCollector(collector.Collector):
                 if '.' not in attr:
                     attrValues[str(attr)] = maya.cmds.getAttr(node + '.' + attr)
             name = str(node)[len(SHADER_PREFIX):]
-            instance = shaderInstance.ShaderInstance(name)
+            instance = test.mayaAssets.shader.shaderInstance.ShaderInstance(name)
             instance.setNode(str(node))
             instance.setAttrValues(attrValues)
             ctx.addInstance(instance)

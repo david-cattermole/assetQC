@@ -9,7 +9,7 @@ import test.mayaAssets.mayaInstance as mayaInstance
 
 class CameraInstance(mayaInstance.MayaInstance):
     def __init__(self, name):
-        super(CameraInstance, self).__init__(name, assetType='camera')
+        super(self.__class__, self).__init__(name, assetType='camera')
 
     def getTransformNode(self):
         return self.data['transform']

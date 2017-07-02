@@ -7,7 +7,7 @@ import maya.cmds
 import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
-import test.mayaAssets.anim.animInstance as animInstance
+import test.mayaAssets.anim.animInstance
 
 CTRL_PREFIX = 'CTRL_'
 
@@ -56,7 +56,7 @@ class AnimCollector(collector.Collector):
 
                 # create instance
                 name = str(ctrlNode).split('|')[-1] + '_ANIM'
-                instance = animInstance.AnimInstance(name)
+                instance = test.mayaAssets.anim.animInstance.AnimInstance(name)
                 instance.setNode(str(ctrlNode))
                 instance.setCurveNodeList(curveList)
                 instance.setControlNodeList(ctrlList)

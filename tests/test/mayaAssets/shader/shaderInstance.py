@@ -8,7 +8,7 @@ import test.mayaAssets.mayaInstance as mayaInstance
 
 class ShaderInstance(mayaInstance.MayaInstance):
     def __init__(self, name):
-        super(ShaderInstance, self).__init__(name, assetType='shader')
+        super(self.__class__, self).__init__(name, assetType='shader')
 
     def getAttrValues(self):
         return self.data['attrValues']

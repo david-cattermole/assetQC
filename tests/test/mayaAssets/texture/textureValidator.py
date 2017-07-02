@@ -7,7 +7,6 @@ import os
 import assetQC.api.register as register
 import assetQC.api.validator as validator
 
-
 TEXTURE_EXTENSIONS = ['png', 'jpeg', 'jpg', 'tga', 'bmp',
                       'exr', 'tif', 'tiff', 'hdr']
 

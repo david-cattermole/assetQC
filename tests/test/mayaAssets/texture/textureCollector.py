@@ -9,7 +9,7 @@ import maya.cmds
 import assetQC.api.register as register
 import assetQC.api.collector as collector
 import assetQC.api.context as context
-import test.mayaAssets.texture.textureInstance as textureInstance
+import test.mayaAssets.texture.textureInstance
 
 TEXTURE_EXTENSIONS = ['png', 'jpeg', 'jpg', 'tga', 'bmp',
                       'exr', 'tif', 'tiff', 'hdr']
@@ -56,7 +56,7 @@ class TextureCollector(collector.Collector):
                 if len(split) > 1:
                     name = '_'.join(split[:-1]) + '_' + str(split[-1]).upper()
 
-                instance = textureInstance.TextureInstance(str(name))
+                instance = test.mayaAssets.texture.textureInstance.TextureInstance(str(name))
                 instance.setNode(str(node))
                 instance.setAttr(str(attr))
                 instance.setNodeAttr(str(nodeAttr))

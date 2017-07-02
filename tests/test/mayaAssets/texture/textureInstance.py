@@ -8,7 +8,7 @@ import test.mayaAssets.mayaInstance as mayaInstance
 
 class TextureInstance(mayaInstance.MayaInstance):
     def __init__(self, name):
-        super(TextureInstance, self).__init__(name, assetType='texture')
+        super(self.__class__, self).__init__(name, assetType='texture')
 
     # def getNode(self):
     #     return self.data['node']

@@ -10,7 +10,7 @@ import test.mayaAssets.mayaInstance as mayaInstance
 
 class RigInstance(mayaInstance.MayaInstance):
     def __init__(self, name):
-        super(RigInstance, self).__init__(name, assetType='rig')
+        super(self.__class__, self).__init__(name, assetType='rig')
 
     def getRigSetNode(self):
         return self.data['rig_set']
