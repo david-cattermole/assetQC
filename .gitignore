@@ -3,3 +3,4 @@ docs
 temp
 assetqc.log
 .coverage
+.idea
