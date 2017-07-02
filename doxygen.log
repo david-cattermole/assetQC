@@ -224,13 +224,7 @@ Generating caller graph for function assetQC::api::fixer::Fixer::preRun
 Generating caller graph for function assetQC::api::fixer::Fixer::run
 Generating docs for namespace assetQC::api::lib
 Generating docs for namespace assetQC::api::logger
-Generating call graph for function assetQC::api::logger::debug
-Generating call graph for function assetQC::api::logger::error
-Generating call graph for function assetQC::api::logger::failure
-Generating caller graph for function assetQC::api::logger::getLogger
-Generating call graph for function assetQC::api::logger::info
-Generating call graph for function assetQC::api::logger::progress
-Generating call graph for function assetQC::api::logger::warning
+Generating docs for compound assetQC::api::logger::AssetQCLogger...
 Generating docs for namespace assetQC::api::register
 Generating caller graph for function assetQC::api::register::getSearchPaths
 Generating call graph for function assetQC::api::register::importAllPlugins
@@ -279,96 +273,89 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/72
-Running dot for graph 2/72
-Running dot for graph 3/72
-Running dot for graph 4/72
-Running dot for graph 5/72
-Running dot for graph 6/72
-Running dot for graph 7/72
-Running dot for graph 8/72
-Running dot for graph 9/72
-Running dot for graph 10/72
-Running dot for graph 11/72
-Running dot for graph 12/72
-Running dot for graph 13/72
-Running dot for graph 14/72
-Running dot for graph 15/72
-Running dot for graph 16/72
-Running dot for graph 17/72
-Running dot for graph 18/72
-Running dot for graph 19/72
-Running dot for graph 20/72
-Running dot for graph 21/72
-Running dot for graph 22/72
-Running dot for graph 23/72
-Running dot for graph 24/72
-Running dot for graph 25/72
-Running dot for graph 26/72
-Running dot for graph 27/72
-Running dot for graph 28/72
-Running dot for graph 29/72
-Running dot for graph 30/72
-Running dot for graph 31/72
-Running dot for graph 32/72
-Running dot for graph 33/72
-Running dot for graph 34/72
-Running dot for graph 35/72
-Running dot for graph 36/72
-Running dot for graph 37/72
-Running dot for graph 38/72
-Running dot for graph 39/72
-Running dot for graph 40/72
-Running dot for graph 41/72
-Running dot for graph 42/72
-Running dot for graph 43/72
-Running dot for graph 44/72
-Running dot for graph 45/72
-Running dot for graph 46/72
-Running dot for graph 47/72
-Running dot for graph 48/72
-Running dot for graph 49/72
-Running dot for graph 50/72
-Running dot for graph 51/72
-Running dot for graph 52/72
-Running dot for graph 53/72
-Running dot for graph 54/72
-Running dot for graph 55/72
-Running dot for graph 56/72
-Running dot for graph 57/72
-Running dot for graph 58/72
-Running dot for graph 59/72
-Running dot for graph 60/72
-Running dot for graph 61/72
-Running dot for graph 62/72
-Running dot for graph 63/72
-Running dot for graph 64/72
-Running dot for graph 65/72
-Running dot for graph 66/72
-Running dot for graph 67/72
-Running dot for graph 68/72
-Running dot for graph 69/72
-Running dot for graph 70/72
-Running dot for graph 71/72
-Running dot for graph 72/72
-Patching output file 1/18
-Patching output file 2/18
-Patching output file 3/18
-Patching output file 4/18
-Patching output file 5/18
-Patching output file 6/18
-Patching output file 7/18
-Patching output file 8/18
-Patching output file 9/18
-Patching output file 10/18
-Patching output file 11/18
-Patching output file 12/18
-Patching output file 13/18
-Patching output file 14/18
-Patching output file 15/18
-Patching output file 16/18
-Patching output file 17/18
-Patching output file 18/18
-symbol cache used 221/65536 hits=11674 misses=221
-lookup cache used 291/65536 hits=655 misses=308
+Running dot for graph 1/66
+Running dot for graph 2/66
+Running dot for graph 3/66
+Running dot for graph 4/66
+Running dot for graph 5/66
+Running dot for graph 6/66
+Running dot for graph 7/66
+Running dot for graph 8/66
+Running dot for graph 9/66
+Running dot for graph 10/66
+Running dot for graph 11/66
+Running dot for graph 12/66
+Running dot for graph 13/66
+Running dot for graph 14/66
+Running dot for graph 15/66
+Running dot for graph 16/66
+Running dot for graph 17/66
+Running dot for graph 18/66
+Running dot for graph 19/66
+Running dot for graph 20/66
+Running dot for graph 21/66
+Running dot for graph 22/66
+Running dot for graph 23/66
+Running dot for graph 24/66
+Running dot for graph 25/66
+Running dot for graph 26/66
+Running dot for graph 27/66
+Running dot for graph 28/66
+Running dot for graph 29/66
+Running dot for graph 30/66
+Running dot for graph 31/66
+Running dot for graph 32/66
+Running dot for graph 33/66
+Running dot for graph 34/66
+Running dot for graph 35/66
+Running dot for graph 36/66
+Running dot for graph 37/66
+Running dot for graph 38/66
+Running dot for graph 39/66
+Running dot for graph 40/66
+Running dot for graph 41/66
+Running dot for graph 42/66
+Running dot for graph 43/66
+Running dot for graph 44/66
+Running dot for graph 45/66
+Running dot for graph 46/66
+Running dot for graph 47/66
+Running dot for graph 48/66
+Running dot for graph 49/66
+Running dot for graph 50/66
+Running dot for graph 51/66
+Running dot for graph 52/66
+Running dot for graph 53/66
+Running dot for graph 54/66
+Running dot for graph 55/66
+Running dot for graph 56/66
+Running dot for graph 57/66
+Running dot for graph 58/66
+Running dot for graph 59/66
+Running dot for graph 60/66
+Running dot for graph 61/66
+Running dot for graph 62/66
+Running dot for graph 63/66
+Running dot for graph 64/66
+Running dot for graph 65/66
+Running dot for graph 66/66
+Patching output file 1/17
+Patching output file 2/17
+Patching output file 3/17
+Patching output file 4/17
+Patching output file 5/17
+Patching output file 6/17
+Patching output file 7/17
+Patching output file 8/17
+Patching output file 9/17
+Patching output file 10/17
+Patching output file 11/17
+Patching output file 12/17
+Patching output file 13/17
+Patching output file 14/17
+Patching output file 15/17
+Patching output file 16/17
+Patching output file 17/17
+symbol cache used 218/65536 hits=11618 misses=218
+lookup cache used 285/65536 hits=649 misses=302
 finished...

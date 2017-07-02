@@ -151,6 +151,7 @@ Intended to be used for internal use ONLY.
 </div>
 <div class="memdoc">
 <div class="fragment"><pre class="fragment">
+Returns information about all instances and their validity. 
 
 :param context: 
 :param validFilter: 
@@ -187,7 +188,10 @@ Intended to be used for internal use ONLY.
       </table>
 </div>
 <div class="memdoc">
-
+<div class="fragment"><pre class="fragment">
+Determines if we are running inside Autodesk Maya.
+:return: True or False. 
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="ae4eb849ca180cdfe621db1661a221ce1"></a><!-- doxytag: member="assetQC::api::utils::isStandaloneRunning" ref="ae4eb849ca180cdfe621db1661a221ce1" args="" -->
@@ -203,7 +207,10 @@ Intended to be used for internal use ONLY.
       </table>
 </div>
 <div class="memdoc">
-
+<div class="fragment"><pre class="fragment">
+Determines if we are running inside the standalone Python interpreter.
+:return: True or False. 
+</pre></div> 
 </div>
 </div>
 <a class="anchor" id="aabac01f23742a5115eb4ed149afc3a25"></a><!-- doxytag: member="assetQC::api::utils::printProgress" ref="aabac01f23742a5115eb4ed149afc3a25" args="" -->
@@ -255,8 +262,9 @@ Intended to be used for internal use ONLY.
 </div>
 <div class="memdoc">
 <div class="fragment"><pre class="fragment">
+Print a progress number to the log.
 
-:param msg: 
+:param msg: Text for the progress. For example the 'step' that has progress.
 :param index: 
 :param total: 
 :param minNum: 
@@ -312,12 +320,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 <div class="fragment"><pre class="fragment">
-
-:param msg: 
-:param num: 
-:param progressCb: 
-:param logger: 
-:return: 
+Print a progress number to the log. 
 </pre></div> 
 </div>
 </div>

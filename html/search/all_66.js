@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['failure',['failure',['../dd/d37/namespaceassetQC_1_1api_1_1logger.html#af0e67936344658e1c4d5409c72f51e87',1,'assetQC::api::logger']]],
+  ['failure',['failure',['../db/dc6/classassetQC_1_1api_1_1logger_1_1AssetQCLogger.html#a0abc4bd1af76a87148a9ba25a6b3efeb',1,'assetQC::api::logger::AssetQCLogger']]],
   ['failurestatus',['FailureStatus',['../d6/dcb/classassetQC_1_1api_1_1status_1_1FailureStatus.html',1,'assetQC::api::status']]],
   ['finish_5fpercent',['FINISH_PERCENT',['../d0/d0c/namespaceassetQC_1_1api_1_1lib.html#aeae5864c292b953b80f3d491510b8aad',1,'assetQC::api::lib']]],
   ['fixer',['Fixer',['../d7/da8/classassetQC_1_1api_1_1fixer_1_1Fixer.html',1,'assetQC::api::fixer']]],
