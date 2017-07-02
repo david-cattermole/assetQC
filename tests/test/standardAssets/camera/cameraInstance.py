@@ -3,12 +3,12 @@ Defines a camera instance of an asset.
 """
 
 import assetQC.api.register as register
-import test.standardAssets.standardInstance as standardInstance
+import test.standardAssets.standardInstance
 
 
-class CameraInstance(standardInstance.StandardInstance):
+class CameraInstance(test.standardAssets.standardInstance.StandardInstance):
     def __init__(self, name, fileObj):
-        super(CameraInstance, self).__init__(name, fileObj, assetType='camera')
+        super(self.__class__, self).__init__(name, fileObj, assetType='camera')
 
     def getTranslateX(self):
         return self.data.get('translateX', [])
@@ -85,7 +85,6 @@ class CameraInstance(standardInstance.StandardInstance):
     def setFocalLength(self, value):
         assert isinstance(value, float)
         self.data['focalLength'] = value
-
 
 manager = register.getPluginManager()
 manager.registerPlugin(CameraInstance)

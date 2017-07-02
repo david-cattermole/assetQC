@@ -56,6 +56,9 @@ def _createFile(data, name, assetType, root):
 
 
 class AssetFile(object):
+    """
+    Defines an asset file with convenient functions for reading the data.
+    """
     def __init__(self, path, name, assetType, ext='json'):
         self.__path = path
         self.__name = name
@@ -80,6 +83,14 @@ class AssetFile(object):
 
 
 def getAssets(root):
+    """
+    Return a list of assets.
+
+    :param root: Root directory.
+    :type root: basestring
+    :rtype: list of AssetFiles 
+    :return: List of AssetFile class objects.
+    """
     assert os.path.isdir(root)
     assetList = []
     assetTypes = os.listdir(root)
@@ -216,13 +227,21 @@ def createTrackCameraAsset(name='trackCamera', subName=None, root=None):
     return createCameraAsset(data=data, name=name, root=root), plateAsset
 
 
-def createSphereGeomAsset(name='sphereGeo1', root=None, data=None):
+def createSphereGeomAsset(name='sphereGeom1', root=None, data=None):
     data = {
         'shapes': ['pSphereShape1'],
         'faceNum': 400,
         'vertNum': 360
     }
     return createGeometryAsset(data=data, name=name, root=root)
+
+
+def createCharacterRigAsset(name='charRig1', root=None, data=None):
+    data = {
+        'controls': ['world_CTRL'],
+        'meshes': ['pSphereShape1'],
+    }
+    return createRigAsset(data=data, name=name, root=root)
 
 
 def createMetalShaderAsset(name='metalShd1', root=None, data=None):

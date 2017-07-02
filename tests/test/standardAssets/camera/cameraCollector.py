@@ -16,10 +16,12 @@ class CameraCollector(collector.Collector):
     hostApps = ['standalone']
 
     def condition(self, ctx):
-        return True
+        return super(self.__class__, self).condition(ctx)
 
     def run(self, ctx):
         assert isinstance(ctx, context.Context)
+        super(self.__class__, self).run(ctx)
+
         root = ctx.getRootDirectory()
         assets = stdUtils.getAssets(root)
 

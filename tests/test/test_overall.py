@@ -28,7 +28,7 @@ class TestOverall(test.baseLib.BaseCase):
 
         geom = stdUtils.createSphereGeomAsset(root=root)
 
-        # rig = stdUtils.createCharacterRigAsset(name='adam', root=root)
+        rig = stdUtils.createCharacterRigAsset(name='adam', root=root)
 
         metalShd = stdUtils.createMetalShaderAsset(root=root)
         woodShd = stdUtils.createWoodShaderAsset(root=root)
