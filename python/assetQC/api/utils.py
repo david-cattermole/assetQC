@@ -12,6 +12,7 @@ import assetQC.api.logger
 HOST_APP_ALL = 'all'
 HOST_APP_STANDALONE = 'standalone'
 HOST_APP_MAYA = 'maya'
+ASSET_TYPE_ALL = 'all'
 
 
 def progressNum(index, totalNum, minNum, maxNum):
