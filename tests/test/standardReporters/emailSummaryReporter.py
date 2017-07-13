@@ -14,15 +14,13 @@ import assetQC.api.utils as utils
 
 
 class EmailSummaryReporter(reporter.Reporter):
-
-    # static variables
     enable = True
     priority = 2
-    assetTypes = []
-    hostApps = []
+    assetTypes = [utils.ASSET_TYPE_ALL]
+    hostApps = [utils.HOST_APP_ALL]
 
     def __init__(self):
-        super(EmailSummaryReporter, self).__init__()
+        super(self.__class__, self).__init__()
 
     def condition(self, ctx):
         return True

@@ -8,15 +8,13 @@ import assetQC.api.utils as utils
 
 
 class AssignShadersReporter(reporter.Reporter):
-
-    # static variables
     enable = False
     priority = 3
-    assetTypes = []
-    hostApps = []
+    assetTypes = [utils.ASSET_TYPE_ALL]
+    hostApps = [utils.HOST_APP_MAYA]
 
     def __init__(self):
-        super(AssignShadersReporter, self).__init__()
+        super(self.__class__, self).__init__()
         return
 
     def run(self, ctx):

@@ -55,15 +55,13 @@ def getRenderImagePath(imageNumber, camera):
 
 
 class ViewportRenderReporter(reporter.Reporter):
-
-    # static variables
     enable = False
     priority = 4
-    assetTypes = []
-    hostApps = []
+    assetTypes = [utils.ASSET_TYPE_ALL]
+    hostApps = [utils.HOST_APP_MAYA]
 
     def __init__(self):
-        super(ViewportRenderReporter, self).__init__()
+        super(self.__class__, self).__init__()
         self.__motionBlurMode = MOTION_BLUR_MODE_DEFAULT
         self.__motionBlurSamples = 3
         self.__imageFormat = 'tga'
