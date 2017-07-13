@@ -1,5 +1,5 @@
 """
-Validates camera instances.
+Fixes a camera instance, if it had an incorrect filmback.
 """
 
 import assetQC.api.register as register
@@ -19,7 +19,7 @@ class CameraFilmbackFixer(fixer.Fixer):
         instance = self.getInstance()
         instance.setFilmBackWidth(36.0)
         instance.setFilmBackHeight(24.0)
-        return
+        return True
 
 manager = register.getPluginManager()
 manager.registerPlugin(CameraFilmbackFixer)
