@@ -2,7 +2,7 @@ import imp
 import os
 
 from assetQC.api import config as config
-from assetQC.api.utils import HOST_APP_ALL
+from assetQC.api.utils import HOST_APP_ALL, ASSET_TYPE_ALL
 
 # module level manager, stores an instance of 'PluginManager'.
 __pluginManager = None
@@ -57,21 +57,39 @@ class PluginManager(object):
         for key in sorted(pluginDict.iterkeys()):
             plugins = pluginDict[key]
             for plugin in plugins:
-                # Only plugins with a specific 'assetType'.
-                if assetType is not None and assetType not in plugin.assetTypes:
-                    continue
+                # Only plugins with a specific 'assetType', or allow '*' to
+                # always succeed
+                assert isinstance(plugin.assetTypes, (list, tuple))
+                if assetType is not None:
+                    if ASSET_TYPE_ALL in plugin.assetTypes:
+                        pass
+                    elif assetType not in plugin.assetTypes:
+                        continue
 
-                # is the plugin enabled?
+                # Is the plugin enabled?
                 if not plugin.enable:
                     continue
 
-                # check if host application is supported by the plugin
-                if hostApp and hostApp != HOST_APP_ALL:
-                    if hostApp not in plugin.hostApps:
+                # Check if host application is supported by the plugin
+                assert plugin.hostApps
+                assert len(plugin.hostApps) > 0
+                if hostApp is not None:
+                    if hostApp == HOST_APP_ALL:
+                        pluginList.append(plugin)
                         continue
 
-                # add the plugin
-                pluginList.append(plugin)
+                    if HOST_APP_ALL in plugin.hostApps:
+                        pluginList.append(plugin)
+                        continue
+
+                    if hostApp in plugin.hostApps:
+                        pluginList.append(plugin)
+                        continue
+                    continue
+                else:
+                    pluginList.append(plugin)
+
+
 
         return pluginList
 
