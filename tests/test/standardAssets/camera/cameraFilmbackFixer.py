@@ -19,7 +19,7 @@ class CameraFilmbackFixer(fixer.Fixer):
         instance = self.getInstance()
         instance.setFilmBackWidth(36.0)
         instance.setFilmBackHeight(24.0)
-        return True
+        return
 
 manager = register.getPluginManager()
 manager.registerPlugin(CameraFilmbackFixer)
