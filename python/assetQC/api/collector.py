@@ -41,7 +41,6 @@ class Collector(baseDataObject.BaseDataObject,
     def logger(self):
         return self.__logger
 
-    @abc.abstractmethod
     def condition(self, ctx):
         """
         Method for sub-classes to override with a condition that the object

@@ -49,7 +49,6 @@ class Fixer(baseDataObject.BaseDataObject,
         """
         return self.__instance
 
-    @abc.abstractmethod
     def condition(self, ctx):
         """
         Method for sub-classes to override with a condition that the object
