@@ -58,9 +58,6 @@ class BasicCollector(collector.Collector):
     assetTypes = ['basic']
     hostApps = [utils.HOST_APP_STANDALONE]
 
-    def condition(self, ctx):
-        return True
-
     def run(self, ctx):
         rootDir = ctx.getRootDirectory()
         fileNames = os.listdir(rootDir)
@@ -93,9 +90,6 @@ class BasicValidator(validator.Validator):
     hostApps = [utils.HOST_APP_STANDALONE]
     fixers = [BasicFixer]  # See "Fixer" class example, below.
 
-    def condition(self, ctx):
-        return True
-
     def run(self, context):
         instance = self.getInstance()
         name = instance.getName()
@@ -122,9 +116,6 @@ class BasicFixer(fixer.Fixer):
     priority = 1
     assetTypes = ['basic']
     hostApps = [utils.HOST_APP_STANDALONE]
-
-    def condition(self, ctx):
-        return True
 
     def run(self, context):
         instance = self.getInstance()
@@ -160,9 +151,6 @@ class BasicReporter(reporter.Reporter):
     def __init__(self):
         super(self.__class__, self).__init__()
         return
-
-    def condition(self, ctx):
-        return True
 
     def run(self, ctx):
         # passed instances
