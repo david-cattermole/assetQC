@@ -73,6 +73,8 @@ manager = register.getPluginManager()
 manager.registerPlugin(BasicCollector)
 ```
 
+For a more complex example of a Collector class, see [standalone cameraCollector](https://github.com/david-cattermole/assetQC/tree/master/tests/test/standardAssets/camera/cameraCollector.py) or [maya cameraCollector](https://github.com/david-cattermole/assetQC/tree/master/tests/test/mayaAssets/camera/cameraCollector.py).
+
 ## Validator
 
 Validator classes define the checks / tests to perform. These are Unit Tests for assets. You may create more than one validator for one asset type. It is recommended to create more classes, each testing a specific aspect of an asset. A Validator may specify a 'Fixer' sub-class to run, in the case that this Validator fails; the use of Fixer classes is optional.  
@@ -98,8 +100,9 @@ class BasicValidator(validator.Validator):
 
 manager = register.getPluginManager()
 manager.registerPlugin(BasicValidator)
-
 ```
+
+For a more complex example of a Validator class, see [standalone cameraFilmbackValidator](https://github.com/david-cattermole/assetQC/tree/master/tests/test/standardAssets/camera/cameraFilmbackValidator.py) or [maya cameraFilmbackValidator](https://github.com/david-cattermole/assetQC/tree/master/tests/test/mayaAssets/camera/cameraFilmbackValidator.py).
 
 ## Fixer
 
@@ -129,8 +132,9 @@ class BasicFixer(fixer.Fixer):
 
 manager = register.getPluginManager()
 manager.registerPlugin(BasicFixer)
-
 ```
+
+For a more complex example of a Fixer class, see [standalone cameraFilmbackFixer](https://github.com/david-cattermole/assetQC/tree/master/tests/test/standardAssets/camera/cameraFilmbackFixer.py) or [maya cameraFilmbackFixer](https://github.com/david-cattermole/assetQC/tree/master/tests/test/mayaAssets/camera/cameraFilmbackFixer.py).
 
 ## Reporters
 
@@ -167,6 +171,8 @@ class BasicReporter(reporter.Reporter):
 manager = register.getPluginManager()
 manager.registerPlugin(BasicReporter)
 ```
+
+For a more complex example of a Reporter class, see [consolePrintReporter (standalone)](https://github.com/david-cattermole/assetQC/tree/master/tests/test/standardReporters/consolePrintReporter.py) or [viewportRenderReporter (maya)](https://github.com/david-cattermole/assetQC/tree/master/tests/test/mayaReporters/viewportRenderReporter.py).
 
 ## API Documentation
 
